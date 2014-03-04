@@ -2,7 +2,7 @@
 <?php global $post; ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<h1 class="entry-title"><?php the_title(); ?> <span class="meta-sep">|</span> <a href="<?php echo get_permalink( $post->post_parent ); ?>" title="<?php printf( __( 'Return to %s', 'mondrian' ), esc_html( get_the_title( $post->post_parent ), 1 ) ); ?>" rev="attachment"><span class="meta-nav">&larr; </span><?php echo get_the_title( $post->post_parent ); ?></a></h1> <?php edit_post_link(); ?>
+	<h1 class="entry-title"><?php the_title(); ?> <span class="meta-sep">|</span> <a href="<?php echo get_permalink( $post->post_parent ); ?>" title="<?php printf( __( 'Return to %s', 'starbasego' ), esc_html( get_the_title( $post->post_parent ), 1 ) ); ?>" rev="attachment"><span class="meta-nav">&larr; </span><?php echo get_the_title( $post->post_parent ); ?></a></h1> <?php edit_post_link(); ?>
 	<?php get_template_part( 'entry', 'meta' ); ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

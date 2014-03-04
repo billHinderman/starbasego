@@ -1,45 +1,45 @@
 <?php
-add_action( 'after_setup_theme', 'mondrian_setup' );
-function mondrian_setup()
+add_action( 'after_setup_theme', 'starbasego_setup' );
+function starbasego_setup()
 {
-	load_theme_textdomain( 'mondrian', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'starbasego', get_template_directory() . '/languages' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
 	global $content_width;
 	if ( ! isset( $content_width ) ) $content_width = 640;
 	register_nav_menus(
-		array( 'main-menu' => __( 'Main Menu', 'mondrian' ) )
+		array( 'main-menu' => __( 'Main Menu', 'starbasego' ) )
 		);
 }
 
-add_action( 'wp_enqueue_scripts', 'mondrian_load_scripts' );
-function mondrian_load_scripts()
+add_action( 'wp_enqueue_scripts', 'starbasego_load_scripts' );
+function starbasego_load_scripts()
 {
 	wp_enqueue_script( 'jquery' );
 }
 
-add_action( 'comment_form_before', 'mondrian_enqueue_comment_reply_script' );
-function mondrian_enqueue_comment_reply_script()
+add_action( 'comment_form_before', 'starbasego_enqueue_comment_reply_script' );
+function starbasego_enqueue_comment_reply_script()
 {
 	if ( get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); }
 }
 
-add_filter( 'the_title', 'mondrian_title' );
-function mondrian_title( $title ) {
+add_filter( 'the_title', 'starbasego_title' );
+function starbasego_title( $title ) {
 	return $title != '' ? $title : ' ';
 }
 
-add_filter( 'wp_title', 'mondrian_filter_wp_title' );
-function mondrian_filter_wp_title( $title )
+add_filter( 'wp_title', 'starbasego_filter_wp_title' );
+function starbasego_filter_wp_title( $title )
 {
 	return $title . esc_attr( get_bloginfo( 'name' ) );
 }
 
-add_action( 'widgets_init', 'mondrian_widgets_init' );
-function mondrian_widgets_init()
+add_action( 'widgets_init', 'starbasego_widgets_init' );
+function starbasego_widgets_init()
 {
 	register_sidebar( array (
-		'name' => __( 'Sidebar Widget Area', 'mondrian' ),
+		'name' => __( 'Sidebar Widget Area', 'starbasego' ),
 		'id' => 'sidebar-widget-area',
 		'before_widget' => '<div id="widget-%1$s" class="widget-container">',
 		'after_widget' => "</div>",
@@ -48,8 +48,8 @@ function mondrian_widgets_init()
 		) );
 }
 
-add_filter( 'get_comments_number', 'mondrian_comments_number' );
-function mondrian_comments_number( $count )
+add_filter( 'get_comments_number', 'starbasego_comments_number' );
+function starbasego_comments_number( $count )
 {
 	if ( !is_admin() ) {
 		global $id;
@@ -60,19 +60,19 @@ function mondrian_comments_number( $count )
 	}
 }
 
-function mondrian_theme_customizer( $wp_customize ) {
-  $wp_customize->add_section( 'mondrian_logo_section' , array(
-		'title'       => __( 'Logo', 'mondrian' ),
+function starbasego_theme_customizer( $wp_customize ) {
+  $wp_customize->add_section( 'starbasego_logo_section' , array(
+		'title'       => __( 'Logo', 'starbasego' ),
 		'priority'    => 30,
 		'description' => 'Upload a logo to replace the default site name and description in the header',
 	) );
 	
-	$wp_customize->add_setting( 'mondrian_logo' );
+	$wp_customize->add_setting( 'starbasego_logo' );
 
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'mondrian_logo', array(
-		'label'    => __( 'Logo', 'mondrian' ),
-		'section'  => 'mondrian_logo_section',
-		'settings' => 'mondrian_logo',
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'starbasego_logo', array(
+		'label'    => __( 'Logo', 'starbasego' ),
+		'section'  => 'starbasego_logo_section',
+		'settings' => 'starbasego_logo',
 	) ) );
 }
-add_action('customize_register', 'mondrian_theme_customizer');
+add_action('customize_register', 'starbasego_theme_customizer');

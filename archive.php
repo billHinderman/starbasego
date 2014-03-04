@@ -2,10 +2,10 @@
 
 
 <h1 class="entry-title"><?php 
-	if ( is_day() ) { printf( __( 'Daily Archives: %s', 'mondrian' ), get_the_time( get_option( 'date_format' ) ) ); }
-	elseif ( is_month() ) { printf( __( 'Monthly Archives: %s', 'mondrian' ), get_the_time( 'F Y' ) ); }
-	elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'mondrian' ), get_the_time( 'Y' ) ); }
-	else { _e( 'Archives', 'mondrian' ); }
+	if ( is_day() ) { printf( __( 'Daily Archives: %s', 'starbasego' ), get_the_time( get_option( 'date_format' ) ) ); }
+	elseif ( is_month() ) { printf( __( 'Monthly Archives: %s', 'starbasego' ), get_the_time( 'F Y' ) ); }
+	elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'starbasego' ), get_the_time( 'Y' ) ); }
+	else { _e( 'Archives', 'starbasego' ); }
 	?>
 </h1>
 

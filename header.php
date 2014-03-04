@@ -11,10 +11,10 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<header class="header" role="banner">
-			<?php if ( get_theme_mod( 'mondrian_logo' ) ) : ?>
-				<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><img src="<?php echo esc_url( get_theme_mod( 'mondrian_logo' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"></a>
+			<?php if ( get_theme_mod( 'starbasego_logo' ) ) : ?>
+				<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><img src="<?php echo esc_url( get_theme_mod( 'starbasego_logo' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"></a>
 			<?php else : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'mondrian' ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'starbasego' ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
 			<?php endif; ?>
 			<nav class="nav" role="navigation">
 				<div class="search"><?php get_search_form(); ?></div>

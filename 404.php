@@ -2,10 +2,10 @@
 
 <article class="post not-found">
 	<header class="header">
-		<h1 class="entry-title"><?php _e( 'Not Found', 'mondrian' ); ?></h1>
+		<h1 class="entry-title"><?php _e( 'Not Found', 'starbasego' ); ?></h1>
 	</header>
 	<section class="entry-content">
-		<p><?php _e( 'Nothing found for the requested page. Try a search instead?', 'mondrian' ); ?></p>
+		<p><?php _e( 'Nothing found for the requested page. Try a search instead?', 'starbasego' ); ?></p>
 		<?php get_search_form(); ?>
 	</section>
 </article>

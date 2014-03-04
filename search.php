@@ -2,7 +2,7 @@
 
 <?php if ( have_posts() ) : ?>
 	
-	<h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'mondrian' ), get_search_query() ); ?></h1>
+	<h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'starbasego' ), get_search_query() ); ?></h1>
 	
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php get_template_part( 'entry' ); ?>
@@ -11,10 +11,10 @@
 <?php else : ?>
 	<article id="post-0" class="post no-results not-found">
 		
-		<h2 class="entry-title"><?php _e( 'Nothing Found', 'mondrian' ); ?></h2>
+		<h2 class="entry-title"><?php _e( 'Nothing Found', 'starbasego' ); ?></h2>
 		
 		<section class="entry-content">
-			<p><?php _e( 'Sorry, nothing matched your search. Please try again.', 'mondrian' ); ?></p>
+			<p><?php _e( 'Sorry, nothing matched your search. Please try again.', 'starbasego' ); ?></p>
 			<?php get_search_form(); ?>
 		</section>
 	</article>
