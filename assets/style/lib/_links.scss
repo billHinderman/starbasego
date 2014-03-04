@@ -6,17 +6,12 @@ Base
 ******************************/
 a, .link,
 a:visited, .link:visited {
-  color: $blue;
+  color: $red;
+  @include transition(color .3s);
   text-decoration: none;
   &:active,
   &:hover {
-    color: darken($blue, 15%);
-  }
-  &:hover {
-    text-decoration: underline;
-  }
-  &:active {
-    text-decoration: none;
+    color: inherit;
   }
   &[rel^="external"],
   &[rel*=" external"],
