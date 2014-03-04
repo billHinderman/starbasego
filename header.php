@@ -7,6 +7,10 @@
 		<meta name="description" content="<?php bloginfo( 'description' ); ?>" />
 		<meta name="author" content="<?php bloginfo( 'name' ); ?>" />
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
+
+		<script type="text/javascript" src="//use.typekit.net/cqy4fmu.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
