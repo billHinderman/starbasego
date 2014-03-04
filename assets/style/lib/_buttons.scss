@@ -1,0 +1,49 @@
+/************************************************************
+BUTTONS
+************************************************************/
+/******************************
+Base
+******************************/
+button, .button, 
+input[type=submit], .submit {
+  background: $blue;
+  border: 0;
+  border-radius: 0;
+  color: $white;
+  font-size: 1em;
+  cursor: pointer;
+  padding: .25em;
+  &:hover {
+    background: darken($blue, 5%);
+  }
+  &:active {
+    background: darken($blue, 10%);
+  }
+}
+/******************************
+Size Options
+******************************/
+.button-tiny, .submit-tiny {
+  font-size: .5em;
+  padding: .25em;
+}
+.button-small, .submit-small {
+  font-size: .75em;
+  padding: .25em;
+}
+.button-large, .submit-large {
+  font-size: 1.5em;
+  padding: .25em;
+}
+
+/******************************
+States
+******************************/
+button.disabled, button:disabled,
+.button.disabled, .button:disabled,
+submit.disabled, submit:disabled,
+.submit.disabled, .submit:disabled {
+  background: $greyLt;
+  color: $greyMd;
+  cursor: default;
+}

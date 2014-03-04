@@ -1,0 +1,31 @@
+/************************************************************
+LINKS
+************************************************************/
+/******************************
+Base
+******************************/
+a, .link,
+a:visited, .link:visited {
+  color: $blue;
+  text-decoration: none;
+  &:active,
+  &:hover {
+    color: darken($blue, 15%);
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    text-decoration: none;
+  }
+  &[rel^="external"],
+  &[rel*=" external"],
+  &[target^="blank"],
+  &[target*="blank "],
+  &:not([href*="website.com"]),
+  &:not([href^="/"]),
+  &:not([href^="#"]),
+  &.external {
+    //external styles
+  }
+}
