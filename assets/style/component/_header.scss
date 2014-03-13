@@ -1,5 +1,13 @@
 .header {
 	.nav {
+		display: block;
+		height: 100%;
+		margin-right: -320px;
+		position: fixed;
+		right: 0px;
+		top: 0;
+		width: 320px;
+		@include transition(margin-right .3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s);
 		.nav-menu {
 			
 		}
@@ -19,3 +27,7 @@
 	}
 }
 
+.menu .header .nav {
+	margin-right: 0px;
+	@include transition(margin-right .3s cubic-bezier(0.905, 0.015, 0.65, 0.97) .05s);
+}

@@ -13,10 +13,6 @@ Main
 body {
   background: $white;
   color: $black;
-  @include transition(margin-left .3s);
-  &.active {
-    margin-left: 300px;
-  }
 }
 .container {
   background: $white;
