@@ -14,5 +14,4 @@
 
 .menu .content {
 	margin-left: -320px;
-	@include transition(margin-left .3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s);
 }

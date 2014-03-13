@@ -2215,20 +2215,19 @@ submit.disabled, submit:disabled,
     max-width: 100%; }
 
 .menu .header .nav {
-  margin-right: 0px;
-  -webkit-transition: margin-right 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0.05s;
-  -moz-transition: margin-right 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0.05s;
-  -ms-transition: margin-right 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0.05s;
-  -o-transition: margin-right 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0.05s;
-  transition: margin-right 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0.05s; }
+  margin-right: 0px; }
 
-.menu .footer {
-  margin-left: -320px;
+.footer {
+  margin-left: 0;
   -webkit-transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
   -moz-transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
   -ms-transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
   -o-transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
-  transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s; }
+  transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
+  width: 100%; }
+
+.menu .footer {
+  margin-left: -320px; }
 
 .content {
   background: #fdfdfd;
@@ -2248,12 +2247,7 @@ submit.disabled, submit:disabled,
   transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0.05s; }
 
 .menu .content {
-  margin-left: -320px;
-  -webkit-transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
-  -moz-transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
-  -ms-transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
-  -o-transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
-  transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s; }
+  margin-left: -320px; }
 
 .post {
   max-width: 44em; }
