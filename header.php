@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 		<title><?php wp_title( ' | ', true, 'right' ); ?></title>
 		<meta name="description" content="<?php bloginfo( 'description' ); ?>" />
 		<meta name="author" content="<?php bloginfo( 'name' ); ?>" />
@@ -20,11 +20,12 @@
 			<?php else : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'starbasego' ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
 			<?php endif; ?>
-			<nav class="nav" role="navigation">
-				<div class="search"><?php get_search_form(); ?></div>
-				<?php wp_nav_menu( array( 'container' => false,
-																	'menu_class' => 'nav-menu', 
-																	'theme_location' => 'main-menu' ) ); ?>
-			</nav>
+			<div data-menu>asdfasdf</div>
 		</header>
+		<nav class="header-nav" role="navigation">
+			<div class="search"><?php get_search_form(); ?></div>
+			<?php wp_nav_menu( array( 'container' => false,
+																'menu_class' => 'nav-menu', 
+																'theme_location' => 'main-menu' ) ); ?>
+		</nav>
 		<div class="content" role="main">

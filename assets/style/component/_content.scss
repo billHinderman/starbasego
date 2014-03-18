@@ -1,15 +1,14 @@
 .content {
 	background: $white;
 	color: $black;
+	display: block;
 	margin: 0;
-	max-width: 1440px;
 	min-height: 320px;
-	overflow-x: hidden;
 	padding: 4em 0 1em;
 	position: relative;
+	@include transition(margin-left .3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s);
 	width: 100%;
 	z-index: 1;
-	@include transition(margin-left .3s cubic-bezier(0.905, 0.015, 0.65, 0.97) .05s);
 }
 
 .menu .content {

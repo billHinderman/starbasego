@@ -15,7 +15,11 @@ function starbasego_setup()
 add_action( 'wp_enqueue_scripts', 'starbasego_load_scripts' );
 function starbasego_load_scripts()
 {
-	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script(
+		'script',
+		get_stylesheet_directory_uri() . '/assets/script/script.js',
+		array( 'jquery' )
+	);
 }
 
 add_action( 'comment_form_before', 'starbasego_enqueue_comment_reply_script' );

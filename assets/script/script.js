@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){e("*[data-menu]").on("click",function(){e("body").toggleClass("menu")})});

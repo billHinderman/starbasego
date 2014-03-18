@@ -1,7 +1,11 @@
 .footer {
+	background: $white;
+	display: block;
 	margin-left: 0;
+	position: relative;
 	@include transition(margin-left .3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s);
 	width: 100%;
+	z-index: 1;
 }
 .menu .footer {
 	margin-left: -320px;
