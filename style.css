@@ -81,7 +81,7 @@ Main
   box-sizing: border-box; }
 
 body {
-  background: #fdfdfd;
+  background: #333333;
   color: #231f20; }
 
 .container {
@@ -2214,7 +2214,7 @@ submit.disabled, submit:disabled,
       max-width: 100%; }
 
 .header-nav {
-  background: #e67e22;
+  background: #333333;
   display: block;
   height: 100%;
   margin-right: 320px;
