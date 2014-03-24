@@ -2213,6 +2213,11 @@ submit.disabled, submit:disabled,
     .header .site-logo img {
       max-width: 100%; }
 
+.nav-toggle {
+  color: #3498db;
+  cursor: pointer;
+  font-size: 3em; }
+
 .header-nav {
   background: #333333;
   display: block;
@@ -2228,6 +2233,8 @@ submit.disabled, submit:disabled,
   transition: margin-right 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
   width: 320px;
   z-index: 0; }
+  .header-nav .nav-toggle {
+    color: #fdfdfd; }
 
 .menu .header {
   margin-left: -320px; }

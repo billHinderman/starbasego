@@ -20,10 +20,10 @@
 			<?php else : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'starbasego' ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
 			<?php endif; ?>
-			<i class="fa fa-bars" data-menu></i>
+			<i class="fa fa-bars nav-toggle" data-menu></i>
 		</header>
 		<nav class="header-nav" role="navigation">
-			<i class="fa fa-bars" data-menu></i>
+			<i class="fa fa-bars nav-toggle" data-menu></i>
 			<div class="search"><?php get_search_form(); ?></div>
 			<?php wp_nav_menu( array( 'container' => false,
 																'menu_class' => 'nav-menu', 
