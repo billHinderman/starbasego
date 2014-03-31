@@ -1,3 +1,10 @@
+<?php
+2	/*
+3	Single Post Template: Project
+4	Description: This part is optional, but helpful for describing the Post Template
+5	*/
+6	?>
+
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

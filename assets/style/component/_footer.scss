@@ -5,13 +5,28 @@
 	font-weight: 700;
 	line-height: 1em;
 	margin-left: 0;
-	padding: .5em 0;
+	overflow: hidden;
+	padding: 4em 0;
 	position: relative;
 	text-align: center;
 	text-transform: uppercase;
 	@include transition(margin-left .3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s);
 	width: 100%;
 	z-index: 1;
+
+	.footer-social {
+		margin: .5em auto 0;
+		max-width: $medium;
+		li {
+			display: block;
+			float: left;
+			text-align: center;
+			width: 50%;
+			@media screen and (min-width: $s-m) {
+				width: 25%;
+			}
+		}
+	}
 }
 .menu .footer {
 	margin-left: -320px;

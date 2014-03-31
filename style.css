@@ -90,6 +90,10 @@ body {
   padding: 0 2%;
   width: 100%; }
 
+.welcome {
+  margin-top: -5em;
+  z-index: 2; }
+
 /******************************
 Align
 ******************************/
@@ -429,6 +433,73 @@ Font Options
 /******************************
 Headers
 ******************************/
+.welcome-title {
+  color: #fdfdfd;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 6em;
+  font-weight: 100;
+  line-height: .7em;
+  padding: 1em 16px;
+  text-transform: uppercase;
+  word-break: break-all;
+  width: 240px; }
+  .welcome-title b {
+    color: #f74224;
+    animation: colorloop 9s;
+    -moz-animation: colorloop 9s infinite;
+    /* Firefox */
+    -webkit-animation: colorloop 9s infinite;
+    /* Safari and Chrome */
+    font-weight: 700; }
+  @media screen and (min-width: 640px) {
+    .welcome-title {
+      font-size: 9em;
+      width: 320px; } }
+
+@-moz-keyframes colorloop {
+  0% {
+    color: #f74224; }
+
+  12.5% {
+    color: #8e44ad; }
+
+  25% {
+    color: #f1c40f; }
+
+  50% {
+    color: #e67e22; }
+
+  67.5% {
+    color: #f1c40f; }
+
+  75% {
+    color: #8e44ad; }
+
+  100% {
+    color: #f74224; } }
+
+@-webkit-keyframes colorloop {
+  0% {
+    color: #f74224; }
+
+  12.5% {
+    color: #8e44ad; }
+
+  25% {
+    color: #f1c40f; }
+
+  50% {
+    color: #e67e22; }
+
+  67.5% {
+    color: #f1c40f; }
+
+  75% {
+    color: #8e44ad; }
+
+  100% {
+    color: #f74224; } }
+
 h1,
 .h1 {
   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2206,6 +2277,8 @@ submit.disabled, submit:disabled,
   transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
   width: 100%;
   z-index: 2; }
+  .header.header-welcome {
+    background: none; }
   .header .site-logo {
     display: block;
     text-align: center; }
@@ -2215,7 +2288,7 @@ submit.disabled, submit:disabled,
     margin: 0; }
 
 .header-nav {
-  background: #2ecc71;
+  background-size: 20px 20px;
   display: block;
   height: 100%;
   margin-right: 320px;
@@ -2229,6 +2302,42 @@ submit.disabled, submit:disabled,
   transition: margin-right 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
   width: 320px;
   z-index: 0; }
+  .header-nav .nav-menu {
+    font-weight: 300;
+    margin: 4em 0 0;
+    text-transform: uppercase;
+    -webkit-transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
+    -moz-transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
+    -ms-transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
+    -o-transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
+    transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s; }
+    .header-nav .nav-menu:hover {
+      margin-left: -.25em; }
+    .header-nav .nav-menu a {
+      color: #fdfdfd;
+      display: block;
+      font-size: 2em;
+      line-height: 1.5em;
+      padding: 0 .25em;
+      position: relative;
+      -webkit-transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
+      -moz-transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
+      -ms-transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
+      -o-transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
+      transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s; }
+      .header-nav .nav-menu a:active, .header-nav .nav-menu a:hover {
+        margin-left: 1em; }
+      .header-nav .nav-menu a:before {
+        border-bottom: 1em solid transparent;
+        border-left: 1em solid #fdfdfd;
+        border-top: 1em solid transparent;
+        content: "";
+        display: block;
+        height: 0;
+        left: -1.25em;
+        position: absolute;
+        top: -.25em;
+        width: 0; }
 
 .menu .header {
   margin-left: -320px; }
@@ -2292,41 +2401,22 @@ submit.disabled, submit:disabled,
   .nav-toggle:hover .nav-text {
     color: #231f20; }
 
-@media screen and (min-width: 640px) {
-  .menu .nav-toggle .nav-icon {
-    background: transparent; }
-    .menu .nav-toggle .nav-icon:after {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-      top: 0 !important; }
-    .menu .nav-toggle .nav-icon:before {
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-      top: 0 !important; } }
-
-.circle {
-  position: relative;
-  width: 50px; }
-  .circle:after, .circle:before {
-    border-radius: 50%;
-    content: "";
-    display: block;
-    height: 100px;
-    opacity: .85;
-    position: absolute;
-    width: 100px; }
-  .circle:after {
-    background: #f74224;
-    left: -50px; }
-  .circle:before {
-    background: #3498db;
-    right: -50px; }
+.menu .nav-toggle .nav-icon {
+  background: transparent; }
+  .menu .nav-toggle .nav-icon:after {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0 !important; }
+  .menu .nav-toggle .nav-icon:before {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 0 !important; }
 
 .footer {
   background: #fdfdfd;
@@ -2335,7 +2425,8 @@ submit.disabled, submit:disabled,
   font-weight: 700;
   line-height: 1em;
   margin-left: 0;
-  padding: .5em 0;
+  overflow: hidden;
+  padding: 4em 0;
   position: relative;
   text-align: center;
   text-transform: uppercase;
@@ -2346,6 +2437,17 @@ submit.disabled, submit:disabled,
   transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
   width: 100%;
   z-index: 1; }
+  .footer .footer-social {
+    margin: .5em auto 0;
+    max-width: 768px; }
+    .footer .footer-social li {
+      display: block;
+      float: left;
+      text-align: center;
+      width: 50%; }
+      @media screen and (min-width: 640px) {
+        .footer .footer-social li {
+          width: 25%; } }
 
 .menu .footer {
   margin-left: -320px; }

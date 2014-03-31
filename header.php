@@ -14,7 +14,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<header class="header" data-fill role="banner">
+		<header class="header" role="banner">
 			<?php if ( get_theme_mod( 'starbasego_logo' ) ) : ?>
 				<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><img src="<?php echo esc_url( get_theme_mod( 'starbasego_logo' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"></a>
 			<?php else : ?>
@@ -29,4 +29,3 @@
 																'theme_location' => 'main-menu' ) ); ?>
 		</nav>
 		<div class="content" role="main">
-			<div class="circle"></div>
