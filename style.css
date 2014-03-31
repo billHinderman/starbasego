@@ -90,10 +90,6 @@ body {
   padding: 0 2%;
   width: 100%; }
 
-.welcome {
-  margin-top: -5em;
-  z-index: 2; }
-
 /******************************
 Align
 ******************************/
@@ -171,6 +167,50 @@ Floats
 
 .float-right {
   float: right; }
+
+@-moz-keyframes colorloop {
+  0% {
+    color: #f74224; }
+
+  12.5% {
+    color: #8e44ad; }
+
+  25% {
+    color: #f1c40f; }
+
+  50% {
+    color: #e67e22; }
+
+  67.5% {
+    color: #f1c40f; }
+
+  75% {
+    color: #8e44ad; }
+
+  100% {
+    color: #f74224; } }
+
+@-webkit-keyframes colorloop {
+  0% {
+    color: #f74224; }
+
+  12.5% {
+    color: #8e44ad; }
+
+  25% {
+    color: #f1c40f; }
+
+  50% {
+    color: #e67e22; }
+
+  67.5% {
+    color: #f1c40f; }
+
+  75% {
+    color: #8e44ad; }
+
+  100% {
+    color: #f74224; } }
 
 /************************************************************
 GRID
@@ -433,73 +473,6 @@ Font Options
 /******************************
 Headers
 ******************************/
-.welcome-title {
-  color: #fdfdfd;
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 6em;
-  font-weight: 100;
-  line-height: .7em;
-  padding: 1em 16px;
-  text-transform: uppercase;
-  word-break: break-all;
-  width: 240px; }
-  .welcome-title b {
-    color: #f74224;
-    animation: colorloop 9s;
-    -moz-animation: colorloop 9s infinite;
-    /* Firefox */
-    -webkit-animation: colorloop 9s infinite;
-    /* Safari and Chrome */
-    font-weight: 700; }
-  @media screen and (min-width: 640px) {
-    .welcome-title {
-      font-size: 9em;
-      width: 320px; } }
-
-@-moz-keyframes colorloop {
-  0% {
-    color: #f74224; }
-
-  12.5% {
-    color: #8e44ad; }
-
-  25% {
-    color: #f1c40f; }
-
-  50% {
-    color: #e67e22; }
-
-  67.5% {
-    color: #f1c40f; }
-
-  75% {
-    color: #8e44ad; }
-
-  100% {
-    color: #f74224; } }
-
-@-webkit-keyframes colorloop {
-  0% {
-    color: #f74224; }
-
-  12.5% {
-    color: #8e44ad; }
-
-  25% {
-    color: #f1c40f; }
-
-  50% {
-    color: #e67e22; }
-
-  67.5% {
-    color: #f1c40f; }
-
-  75% {
-    color: #8e44ad; }
-
-  100% {
-    color: #f74224; } }
-
 h1,
 .h1 {
   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2277,8 +2250,6 @@ submit.disabled, submit:disabled,
   transition: margin-left 0.3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
   width: 100%;
   z-index: 2; }
-  .header.header-welcome {
-    background: none; }
   .header .site-logo {
     display: block;
     text-align: center; }
@@ -2470,6 +2441,37 @@ submit.disabled, submit:disabled,
 
 .menu .content {
   margin-left: -320px; }
+
+.header.header-welcome {
+  background: none;
+  padding: 0; }
+
+.welcome {
+  margin-top: -5em;
+  z-index: 2; }
+
+.welcome-title {
+  color: #fdfdfd;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 6em;
+  font-weight: 100;
+  line-height: .7em;
+  padding: 1em 16px;
+  text-transform: uppercase;
+  word-break: break-all;
+  width: 240px; }
+  .welcome-title b {
+    color: #f74224;
+    -webkit-animation: colorloop 9s infinite;
+    -moz-animation: colorloop 9s infinite;
+    -ms-animation: colorloop 9s infinite;
+    -o-animation: colorloop 9s infinite;
+    animation: colorloop 9s infinite;
+    font-weight: 700; }
+  @media screen and (min-width: 640px) {
+    .welcome-title {
+      font-size: 9em;
+      width: 320px; } }
 
 .post {
   max-width: 44em; }

@@ -1,0 +1,30 @@
+.header.header-welcome {
+    background: none;
+    padding: 0;
+  }
+
+.welcome {
+  margin-top: -5em;
+  z-index: 2;
+}
+
+.welcome-title {
+  color: $white;
+  font-family: $heading;
+  font-size: 6em;
+  font-weight: 100;
+  line-height: .7em;
+  padding: 1em 16px;
+  text-transform: uppercase;
+  word-break: break-all;
+  width: 240px;
+  b {
+    color: $red;
+    @include animation(colorloop, 9s, infinite);
+    font-weight: 700;
+  }
+  @media screen and (min-width: $s-m) {
+    font-size: 9em;
+    width: 320px;
+  }
+}
