@@ -7,7 +7,6 @@
   75%  {color:$violet;}
   100%   {color:$red;}
 } 
-
 @-webkit-keyframes colorloop /* Webkit */ {
   0%   {color:$red;}
   12.5%  {color:$violet;}
@@ -16,4 +15,51 @@
   67.5%  {color:$yellow;}
   75%  {color:$violet;}
   100%   {color:$red;}
+}
+
+
+@-moz-keyframes bgloop /* Firefox */ {
+  0%   {background:$red;}
+  12.5%  {background:$violet;}
+  25%  {background:$yellow;}
+  50%  {background:$orange;}
+  67.5%  {background:$yellow;}
+  75%  {background:$violet;}
+  100%   {background:$red;}
+} 
+@-webkit-keyframes bgloop /* Webkit */ {
+  0%   {background:$red;}
+  12.5%  {background:$violet;}
+  25%  {background:$yellow;}
+  50%  {background:$orange;}
+  67.5%  {background:$yellow;}
+  75%  {background:$violet;}
+  100%   {background:$red;}
+}
+
+
+
+
+.arrow {
+	background: $red;
+	content:"";
+	height: 4px;
+	position: relative;
+	@include transition(width 6s ease-in-out);
+	width: 20px;
+	&:hover {
+		width: 100%;
+	}
+	&:before {
+		border-bottom: 8px solid transparent;
+		border-left: 8px solid $red;
+		border-top: 8px solid transparent;
+		content: "";
+		display: block;
+		position: absolute;
+		height: 0; 
+		right: -4px;
+		top: -6px;
+		width: 0; 
+	}
 }

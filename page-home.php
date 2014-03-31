@@ -27,6 +27,7 @@
 			<div class="welcome" data-bg-image="<?php bloginfo(template_url); ?>/assets/images/07.jpg" data-fill>
 				<h1 class="welcome-title">starbase<br><b>go!</b></h1>
 			</div>
+			<div class="arrow"></div>
 
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

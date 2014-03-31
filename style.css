@@ -212,6 +212,75 @@ Floats
   100% {
     color: #f74224; } }
 
+@-moz-keyframes bgloop {
+  0% {
+    background: #f74224; }
+
+  12.5% {
+    background: #8e44ad; }
+
+  25% {
+    background: #f1c40f; }
+
+  50% {
+    background: #e67e22; }
+
+  67.5% {
+    background: #f1c40f; }
+
+  75% {
+    background: #8e44ad; }
+
+  100% {
+    background: #f74224; } }
+
+@-webkit-keyframes bgloop {
+  0% {
+    background: #f74224; }
+
+  12.5% {
+    background: #8e44ad; }
+
+  25% {
+    background: #f1c40f; }
+
+  50% {
+    background: #e67e22; }
+
+  67.5% {
+    background: #f1c40f; }
+
+  75% {
+    background: #8e44ad; }
+
+  100% {
+    background: #f74224; } }
+
+.arrow {
+  background: #f74224;
+  content: "";
+  height: 4px;
+  position: relative;
+  -webkit-transition: width 6s ease-in-out;
+  -moz-transition: width 6s ease-in-out;
+  -ms-transition: width 6s ease-in-out;
+  -o-transition: width 6s ease-in-out;
+  transition: width 6s ease-in-out;
+  width: 20px; }
+  .arrow:hover {
+    width: 100%; }
+  .arrow:before {
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #f74224;
+    border-top: 8px solid transparent;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0;
+    right: -4px;
+    top: -6px;
+    width: 0; }
+
 /************************************************************
 GRID
 ************************************************************/
@@ -2443,8 +2512,7 @@ submit.disabled, submit:disabled,
   margin-left: -320px; }
 
 .header.header-welcome {
-  background: none;
-  padding: 0; }
+  background: none; }
 
 .welcome {
   margin-top: -5em;
