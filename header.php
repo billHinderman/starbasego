@@ -14,19 +14,19 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<header class="header" role="banner">
+		<header class="header" data-fill role="banner">
 			<?php if ( get_theme_mod( 'starbasego_logo' ) ) : ?>
 				<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><img src="<?php echo esc_url( get_theme_mod( 'starbasego_logo' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"></a>
 			<?php else : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'starbasego' ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
 			<?php endif; ?>
-			<i class="fa fa-bars nav-toggle" data-menu></i>
+			<a class="nav-toggle" data-menu><span class="nav-text">Menu</span><i class="nav-icon"></i></a>
 		</header>
 		<nav class="header-nav" role="navigation">
-			<i class="fa fa-bars nav-toggle" data-menu></i>
-			<div class="search"><?php get_search_form(); ?></div>
+			<a class="nav-toggle" data-menu><i class="nav-icon"></i></a>
 			<?php wp_nav_menu( array( 'container' => false,
 																'menu_class' => 'nav-menu', 
 																'theme_location' => 'main-menu' ) ); ?>
 		</nav>
 		<div class="content" role="main">
+			<div class="circle"></div>

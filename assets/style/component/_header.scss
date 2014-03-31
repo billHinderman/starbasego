@@ -1,11 +1,11 @@
 .header {
 	background: $white;
 	display: block;
-	margin: 0;
+	padding: .5em;
 	position: relative;
 	@include transition(margin-left .3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s);
 	width: 100%;
-	z-index: 1;
+	z-index: 2;
 	.search {
 
 	}
@@ -17,18 +17,12 @@
 		}
 	}
 	.site-title {
-
+		margin: 0;
 	}
 }
 
-.nav-toggle {
-	color: $blue;
-	cursor: pointer;
-	font-size: 3em;
-}
-
 .header-nav {
-	background: $greyDk;
+	background: $green;
 	display: block;
 	height: 100%;
 	margin-right: 320px;
@@ -41,9 +35,6 @@
 	.nav-menu {
 		
 	}
-	.nav-toggle {
-		color: $white;
-	}
 }
 
 .menu .header {
@@ -52,4 +43,96 @@
 
 .menu .header-nav {
 	margin-right: 0px;
+	.nav-icon,
+  .nav-icon:after,
+	.nav-icon:before {
+		background: $white;
+	}
+}
+
+.nav-toggle {
+	cursor: pointer;
+	display: block;
+  padding: 2em 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  .nav-icon {
+  	background: $red;
+  	content: "";
+  	display: block;
+  	height: .125em;
+  	position: relative;
+  	width: 2em;
+  	@include transition(all .3s);
+  	&:after, &:before {
+	    display: block;
+	    content: "";
+	    height: .125em;
+	    width: 2em;
+	    background: $red;
+	    position: absolute;
+	    @include transition(all .3s);
+	  }
+	  &:after { 
+	  	top: -.625em; 
+	  }
+  	&:before { 
+  		top: .625em; 
+  	}
+  }
+  .nav-text {
+  	color: $red;
+  	font-size: .75em;
+  	left: -2.25em;
+  	position: absolute;
+  	text-transform: uppercase;
+  	top: 2em;
+  	@include transition(all .3s);
+  }
+  &:hover .nav-icon,
+  &:hover .nav-icon:after,
+	&:hover .nav-icon:before {
+		background: $black;
+	}
+	&:hover .nav-text {
+		color: $black;
+	}
+}
+.menu .nav-toggle .nav-icon {
+	@media screen and (min-width: $s-m) {
+		background: transparent;
+	  &:after { 
+	  	@include transform(rotate(45deg));
+	  	top: 0 !important; 
+	  }  
+	  &:before { 
+	  	@include transform(rotate(-45deg));
+	  	top: 0 !important;
+	  }  
+	}
+}
+
+
+.circle {
+	position: relative;
+	width: 50px;
+	&:after,
+	&:before {
+		border-radius: 50%;
+		content: "";
+		display: block;
+		height: 100px;
+		opacity: .85;
+		position: absolute;
+		width: 100px;
+	}
+	&:after {
+		background: $red;
+		left: -50px;
+	}
+	&:before {
+		background: $blue;
+		right: -50px;
+	}
 }

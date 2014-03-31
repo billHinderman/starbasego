@@ -1,8 +1,14 @@
 .footer {
 	background: $white;
 	display: block;
+	font-size: .75em;
+	font-weight: 700;
+	line-height: 1em;
 	margin-left: 0;
+	padding: .5em 0;
 	position: relative;
+	text-align: center;
+	text-transform: uppercase;
 	@include transition(margin-left .3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s);
 	width: 100%;
 	z-index: 1;

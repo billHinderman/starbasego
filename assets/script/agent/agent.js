@@ -1,0 +1,8 @@
+// @codekit-append "background.js"
+// @codekit-append "button.js"
+// @codekit-append "collapse.js"
+// @codekit-append "fill.js"
+// @codekit-append "lightbox.js"
+// @codekit-append "microcontent.js"
+// @codekit-append "nav.js"
+// @codekit-append "thumper.js"
