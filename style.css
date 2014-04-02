@@ -528,7 +528,7 @@ body {
 Font Options
 ******************************/
 .font-heading {
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "alternate-gothic-no-1-d", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .font-mono {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; }
@@ -544,7 +544,7 @@ Headers
 ******************************/
 h1,
 .h1 {
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "alternate-gothic-no-1-d", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 3em;
   font-weight: 100;
   line-height: 1.1em;
@@ -552,7 +552,7 @@ h1,
 
 h2,
 .h2 {
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "alternate-gothic-no-1-d", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 2.25em;
   font-weight: 100;
   line-height: 1.1em;
@@ -560,7 +560,7 @@ h2,
 
 h3,
 .h3 {
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "alternate-gothic-no-1-d", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.5em;
   font-weight: 100;
   line-height: 1.1em;
