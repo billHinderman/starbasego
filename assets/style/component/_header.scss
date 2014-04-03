@@ -87,7 +87,7 @@
   right: 0;
   top: 0;
   .nav-icon {
-  	background: $red;
+  	background: $s-tan;
   	content: "";
   	display: block;
   	height: .125em;
@@ -99,7 +99,7 @@
 	    content: "";
 	    height: .125em;
 	    width: 2em;
-	    background: $red;
+	    background: $s-tan;
 	    position: absolute;
 	    @include transition(all .3s);
 	  }
@@ -111,7 +111,7 @@
   	}
   }
   .nav-text {
-  	color: $red;
+  	color: $s-tan;
   	font-size: .75em;
   	left: -2.25em;
   	position: absolute;

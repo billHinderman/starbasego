@@ -6,7 +6,7 @@ Base
 ******************************/
 a, .link,
 a:visited, .link:visited {
-  color: $red;
+  color: $s-blue;
   @include transition(color .3s);
   text-decoration: none;
   &:active,

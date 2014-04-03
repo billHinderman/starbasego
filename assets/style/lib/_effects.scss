@@ -1,44 +1,44 @@
 @-moz-keyframes colorloop /* Firefox */ {
-  0%   {color:$red;}
+  0%   {color:$s-tan;}
   12.5%  {color:$violet;}
   25%  {color:$yellow;}
   50%  {color:$orange;}
   67.5%  {color:$yellow;}
   75%  {color:$violet;}
-  100%   {color:$red;}
+  100%   {color:$s-tan;}
 } 
 @-webkit-keyframes colorloop /* Webkit */ {
-  0%   {color:$red;}
+  0%   {color:$s-tan;}
   12.5%  {color:$violet;}
   25%  {color:$yellow;}
   50%  {color:$orange;}
   67.5%  {color:$yellow;}
   75%  {color:$violet;}
-  100%   {color:$red;}
+  100%   {color:$s-tan;}
 }
 
 
 @-moz-keyframes bgloop /* Firefox */ {
-  0%   {background:$red;}
+  0%   {background:$s-tan;}
   12.5%  {background:$violet;}
   25%  {background:$yellow;}
   50%  {background:$orange;}
   67.5%  {background:$yellow;}
   75%  {background:$violet;}
-  100%   {background:$red;}
+  100%   {background:$s-tan;}
 } 
 @-webkit-keyframes bgloop /* Webkit */ {
-  0%   {background:$red;}
+  0%   {background:$s-tan;}
   12.5%  {background:$violet;}
   25%  {background:$yellow;}
   50%  {background:$orange;}
   67.5%  {background:$yellow;}
   75%  {background:$violet;}
-  100%   {background:$red;}
+  100%   {background:$s-tan;}
 }
 
 .arrow {
-	background: $red;
+	background: $s-tan;
 	content:"";
 	height: 4px;
 	position: relative;
@@ -49,7 +49,7 @@
 	}
 	&:before {
 		border-bottom: 8px solid transparent;
-		border-left: 8px solid $red;
+		border-left: 8px solid $s-tan;
 		border-top: 8px solid transparent;
 		content: "";
 		display: block;

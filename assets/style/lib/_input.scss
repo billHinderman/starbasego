@@ -22,7 +22,7 @@ textarea,
    	color: $black;
    }
    &:invalid {
-   	border-color: $red;
+   	border-color: $s-tan;
    }
    @media screen and (min-width: $medium) {
    	box-shadow: none;

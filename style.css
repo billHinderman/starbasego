@@ -81,7 +81,7 @@ Main
   box-sizing: border-box; }
 
 body {
-  background: #f74224;
+  background: #e7dece;
   color: #231f20; }
 
 .container {
@@ -170,7 +170,7 @@ Floats
 
 @-moz-keyframes colorloop {
   0% {
-    color: #f74224; }
+    color: #e7dece; }
 
   12.5% {
     color: #8e44ad; }
@@ -188,11 +188,11 @@ Floats
     color: #8e44ad; }
 
   100% {
-    color: #f74224; } }
+    color: #e7dece; } }
 
 @-webkit-keyframes colorloop {
   0% {
-    color: #f74224; }
+    color: #e7dece; }
 
   12.5% {
     color: #8e44ad; }
@@ -210,11 +210,11 @@ Floats
     color: #8e44ad; }
 
   100% {
-    color: #f74224; } }
+    color: #e7dece; } }
 
 @-moz-keyframes bgloop {
   0% {
-    background: #f74224; }
+    background: #e7dece; }
 
   12.5% {
     background: #8e44ad; }
@@ -232,11 +232,11 @@ Floats
     background: #8e44ad; }
 
   100% {
-    background: #f74224; } }
+    background: #e7dece; } }
 
 @-webkit-keyframes bgloop {
   0% {
-    background: #f74224; }
+    background: #e7dece; }
 
   12.5% {
     background: #8e44ad; }
@@ -254,10 +254,10 @@ Floats
     background: #8e44ad; }
 
   100% {
-    background: #f74224; } }
+    background: #e7dece; } }
 
 .arrow {
-  background: #f74224;
+  background: #e7dece;
   content: "";
   height: 4px;
   position: relative;
@@ -271,7 +271,7 @@ Floats
     width: 100%; }
   .arrow:before {
     border-bottom: 8px solid transparent;
-    border-left: 8px solid #f74224;
+    border-left: 8px solid #e7dece;
     border-top: 8px solid transparent;
     content: "";
     display: block;
@@ -821,7 +821,7 @@ Base
 ******************************/
 a, .link,
 a:visited, .link:visited {
-  color: #f74224;
+  color: #80a1a3;
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
   -ms-transition: color 0.3s;
@@ -899,7 +899,7 @@ textarea,
   textarea:invalid,
   .input:invalid,
   .textarea:invalid {
-    border-color: #f74224; }
+    border-color: #e7dece; }
   @media screen and (min-width: 768px) {
     input:not([type=submit]):not([type=file]),
     textarea,
@@ -2397,7 +2397,7 @@ submit.disabled, submit:disabled,
   right: 0;
   top: 0; }
   .nav-toggle .nav-icon {
-    background: #f74224;
+    background: #e7dece;
     content: "";
     display: block;
     height: .125em;
@@ -2413,7 +2413,7 @@ submit.disabled, submit:disabled,
       content: "";
       height: .125em;
       width: 2em;
-      background: #f74224;
+      background: #e7dece;
       position: absolute;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
@@ -2425,7 +2425,7 @@ submit.disabled, submit:disabled,
     .nav-toggle .nav-icon:before {
       top: .625em; }
   .nav-toggle .nav-text {
-    color: #f74224;
+    color: #e7dece;
     font-size: .75em;
     left: -2.25em;
     position: absolute;
@@ -2529,7 +2529,7 @@ submit.disabled, submit:disabled,
   word-break: break-all;
   width: 240px; }
   .welcome-title b {
-    color: #f74224;
+    color: #e7dece;
     -webkit-animation: colorloop 9s infinite;
     -moz-animation: colorloop 9s infinite;
     -ms-animation: colorloop 9s infinite;
