@@ -1,15 +1,31 @@
 /************************************************************
 MIXINS
+
+-Animation
+-Hardware Accelerate
+-Transform
+-Transition
 ************************************************************/
 
-@mixin transition($transition: all .3s) {
-  -webkit-transition: $transition;  
-  -moz-transition: $transition;
-  -ms-transition: $transition; 
-  -o-transition: $transition;  
-  transition: $transition;
+/* Animation */
+@mixin animation($name: all, $time: .3s, $loop: infinite) {
+  -webkit-animation: $name $time $loop;
+  -moz-animation: $name $time $loop;
+  -ms-animation: $name $time $loop;
+  -o-animation: $name $time $loop;
+  animation: $name $time $loop;
 }
 
+/* Hardware Accelerate */
+@mixin hardwareAccelerate() {
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+/* Transform */
 @mixin transform($transform) {
   -webkit-transform: $transform;
      -moz-transform: $transform;
@@ -18,10 +34,11 @@ MIXINS
           transform: $transform;
 }
 
-@mixin animation($name: all, $time: .3s, $loop: infinite) {
-  -webkit-animation: $name $time $loop;
-  -moz-animation: $name $time $loop;
-  -ms-animation: $name $time $loop;
-  -o-animation: $name $time $loop;
-  animation: $name $time $loop;
+/* Transition */
+@mixin transition($transition: all .3s) {
+  -webkit-transition: $transition;  
+  -moz-transition: $transition;
+  -ms-transition: $transition; 
+  -o-transition: $transition;  
+  transition: $transition;
 }

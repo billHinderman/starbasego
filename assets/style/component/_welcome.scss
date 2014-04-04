@@ -4,11 +4,12 @@
 
 .welcome {
   margin-top: -5em;
+  position: relative;
   z-index: 2;
 }
 
 .welcome-title {
-  color: $white;
+  color: $s-tan;
   font-family: $sans;
   font-size: 6em;
   font-weight: 100;
@@ -18,12 +19,21 @@
   word-break: break-all;
   width: 240px;
   b {
-    color: $s-tan;
-    @include animation(colorloop, 9s, infinite);
+    color: $s-blue;
+    /*@include animation(colorloop, 9s, infinite);*/
     font-weight: 700;
   }
   @media screen and (min-width: $s-m) {
     font-size: 9em;
     width: 320px;
   }
+}
+
+.effect {
+  background: rgba($s-tan, 0.4);
+  left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }

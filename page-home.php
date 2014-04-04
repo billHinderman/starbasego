@@ -24,8 +24,10 @@
 																'theme_location' => 'main-menu' ) ); ?>
 		</nav>
 		<div class="content" role="main">
-			<section class="welcome" data-bg-image="<?php bloginfo(template_url); ?>/assets/images/06.jpg" data-fill>
-				<h1 class="welcome-title">starbase<b>go!</b></h1>
+			<section class="welcome" data-bg-image="<?php bloginfo(template_url); ?>/assets/images/space/11.jpg" data-fill>
+				<div class="effect">
+					<h1 class="welcome-title">starbase<br><b>go!</b></h1>
+				</div>
 			</section>
 
 			<div class="arrow"></div>

@@ -67,7 +67,16 @@ Fonts
 ******************************/
 /************************************************************
 MIXINS
+
+-Animation
+-Hardware Accelerate
+-Transform
+-Transition
 ************************************************************/
+/* Animation */
+/* Hardware Accelerate */
+/* Transform */
+/* Transition */
 /************************************************************
 GLOBAL
 ************************************************************/
@@ -2516,10 +2525,11 @@ submit.disabled, submit:disabled,
 
 .welcome {
   margin-top: -5em;
+  position: relative;
   z-index: 2; }
 
 .welcome-title {
-  color: #fdfdfd;
+  color: #e7dece;
   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 6em;
   font-weight: 100;
@@ -2529,17 +2539,21 @@ submit.disabled, submit:disabled,
   word-break: break-all;
   width: 240px; }
   .welcome-title b {
-    color: #e7dece;
-    -webkit-animation: colorloop 9s infinite;
-    -moz-animation: colorloop 9s infinite;
-    -ms-animation: colorloop 9s infinite;
-    -o-animation: colorloop 9s infinite;
-    animation: colorloop 9s infinite;
+    color: #80a1a3;
+    /*@include animation(colorloop, 9s, infinite);*/
     font-weight: 700; }
   @media screen and (min-width: 640px) {
     .welcome-title {
       font-size: 9em;
       width: 320px; } }
+
+.effect {
+  background: rgba(231, 222, 206, 0.4);
+  left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%; }
 
 .post {
   max-width: 44em; }
