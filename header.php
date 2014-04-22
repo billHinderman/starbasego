@@ -23,7 +23,6 @@
 			<a class="nav-toggle" data-menu><span class="nav-text">Menu</span><i class="nav-icon"></i></a>
 		</header>
 		<nav class="header-nav" role="navigation">
-			<a class="nav-toggle" data-menu><i class="nav-icon"></i></a>
 			<?php wp_nav_menu( array( 'container' => false,
 																'menu_class' => 'nav-menu', 
 																'theme_location' => 'main-menu' ) ); ?>

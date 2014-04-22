@@ -19,8 +19,8 @@
   word-break: break-all;
   width: 240px;
   b {
-    color: $s-blue;
-    /*@include animation(colorloop, 9s, infinite);*/
+    color: $s-tan;
+    /* @include animation(colorloop, 3s, infinite); */
     font-weight: 700;
   }
   @media screen and (min-width: $s-m) {
@@ -30,7 +30,7 @@
 }
 
 .effect {
-  background: rgba($s-tan, 0.4);
+  background: rgba($black, 0.5);
   left: 0;
   height: 100%;
   position: absolute;

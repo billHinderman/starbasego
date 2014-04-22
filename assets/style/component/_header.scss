@@ -70,20 +70,11 @@
 	margin-left: -320px;
 }
 
-.menu .header-nav {
-	margin-right: 0px;
-	.nav-icon,
-  .nav-icon:after,
-	.nav-icon:before {
-		background: $white;
-	}
-}
-
 .nav-toggle {
 	cursor: pointer;
 	display: block;
   padding: 2em 1em;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   .nav-icon {
@@ -119,22 +110,20 @@
   	top: 2em;
   	@include transition(all .3s);
   }
-  &:hover .nav-icon,
-  &:hover .nav-icon:after,
-	&:hover .nav-icon:before {
-		background: $black;
-	}
-	&:hover .nav-text {
-		color: $black;
-	}
 }
-.menu .nav-toggle .nav-icon {
+.menu .nav-toggle .nav-text {
+	color: $black;
+}
+.menu .nav-toggle .nav-icon,
+.menu .header-nav .nav-toggle .nav-icon {
 	background: transparent;
   &:after { 
+  	background: $black;
   	@include transform(rotate(45deg));
   	top: 0 !important; 
   }  
   &:before { 
+  	background: $black;
   	@include transform(rotate(-45deg));
   	top: 0 !important;
   }  
