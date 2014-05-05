@@ -4,20 +4,24 @@ BUTTONS
 /******************************
 Base
 ******************************/
-button, .button, 
-input[type=submit], .submit {
-  background: $blue;
-  border: 0;
+button, 
+.button, 
+input[type=submit], 
+.submit:visited, 
+.button:visited {
+  background: transparent;
+  border: .25em solid $white;
   border-radius: 0;
   color: $white;
-  font-size: 1em;
   cursor: pointer;
-  padding: .25em;
+  font-size: 1em;
+  padding: .25em 1em;
+  position: relative;
+  text-transform: uppercase;
+  @include transition(all $transition-static);
   &:hover {
-    background: darken($blue, 5%);
-  }
-  &:active {
-    background: darken($blue, 10%);
+    border-color: $v-blue !important;
+    color: $v-blue !important;
   }
 }
 /******************************

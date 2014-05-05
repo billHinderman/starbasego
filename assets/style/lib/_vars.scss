@@ -9,7 +9,7 @@ $blue: #3498db;
 $green: #2ecc71;
 $greyDk: #333333;
 $greyLt: #f0f0f0;
-$greyMd: #bdc3c7;
+$greyMd: #6d7377;
 $indigo: #4b0082;
 $orange: #e67e22;
 $red: #f74224;
@@ -39,7 +39,14 @@ $large: 960px;
 Fonts
 ******************************/
 
-$heading: "alternate-gothic-no-1-d", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$heading: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 $sans: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif: Georgia, Times, "Times New Roman", serif;
+$script: "bistro-script-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/******************************
+Transition
+******************************/
+$transition-standard: .3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s;
+$transition-static: .3s;

@@ -3,7 +3,7 @@
 	display: block;
 	padding: .5em;
 	position: relative;
-	@include transition(margin-left .3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s);
+	@include transition(margin-left $transition-standard);
 	width: 100%;
 	z-index: 2;
 
@@ -20,47 +20,40 @@
 }
 
 .header-nav {
-	background-size: 20px 20px;
 	display: block;
 	height: 100%;
 	margin-right: 320px;
 	position: fixed;
 	right: 0px;
 	top: 0;
-	@include transition(margin-right .3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s);
+	@include transition(margin-right $transition-standard);
 	width: 320px;
 	z-index: 0;
 	.nav-menu {
 		font-weight: 300;
 		margin: 4em 0 0;
 		text-transform: uppercase;
-		@include transition(margin-left .3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s);
+		@include transition(margin-left $transition-standard);
 		&:hover {
 			margin-left: -.25em;
 		}
+		li {
+			@include long-shadow($type: text, $color: $s-white, $length: 350, $fadeout: false, $skew: false, $direction: left);
+			&:nth-of-type(2n) {
+				@include long-shadow($type: text, $color: $white, $length: 700, $fadeout: false, $skew: false, $direction: right);
+			}
+		}
 		a {
-			color: $white;
+			color: $black;
 			display: block;
 			font-size: 2em;
 			line-height: 1.5em;
 			padding: 0 .25em;
 			position: relative;
-			@include transition(margin-left .3s cubic-bezier(0.905, 0.015, 0.65, 0.97) 0s);
+			@include transition(margin-left $transition-standard);
 			&:active,
 			&:hover {
 				margin-left: 1em;
-			}
-			&:before {
-				border-bottom: 1em solid transparent;
-				border-left: 1em solid $white;
-				border-top: 1em solid transparent;
-				content: "";
-				display: block;
-				height: 0; 
-				left: -1.25em;
-				position: absolute;
-				top: -.25em;
-				width: 0; 
 			}
 		}
 	}
@@ -114,6 +107,11 @@
 .menu .nav-toggle .nav-text {
 	color: $black;
 }
+
+.menu .header-nav {
+	margin-right: 0;
+}
+
 .menu .nav-toggle .nav-icon,
 .menu .header-nav .nav-toggle .nav-icon {
 	background: transparent;

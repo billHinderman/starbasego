@@ -35,7 +35,7 @@ MIXINS
 }
 
 /* Transition */
-@mixin transition($transition: all .3s) {
+@mixin transition($transition: all $transition-standard) {
   -webkit-transition: $transition;  
   -moz-transition: $transition;
   -ms-transition: $transition; 

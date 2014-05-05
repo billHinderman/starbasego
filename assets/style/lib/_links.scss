@@ -7,7 +7,7 @@ Base
 a, .link,
 a:visited, .link:visited {
   color: $s-blue;
-  @include transition(color .3s);
+  @include transition(all $transition-static);
   text-decoration: none;
   &:active,
   &:hover {

@@ -80,3 +80,26 @@ function starbasego_theme_customizer( $wp_customize ) {
 	) ) );
 }
 add_action('customize_register', 'starbasego_theme_customizer');
+
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+add_filter('get_the_excerpt', 'starbasego_new_excerpt');
+function starbasego_new_excerpt($text)
+{
+	if ($text == '')
+	{
+		$text = get_the_content('');
+		$text = strip_shortcodes( $text );
+		$text = apply_filters('the_content', $text);
+		$text = str_replace(']]>', ']]>', $text);
+		$text = strip_tags($text);
+		$text = nl2br($text);
+		$excerpt_length = apply_filters('excerpt_length', 25);
+		$words = explode(' ', $text, $excerpt_length + 1);
+		if (count($words) > $excerpt_length) {
+			array_pop($words);
+			array_push($words, '...');
+			$text = implode(' ', $words);
+		}
+	}
+	return $text;
+}
