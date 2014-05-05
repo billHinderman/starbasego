@@ -2504,7 +2504,11 @@ submit.disabled, submit:disabled,
   width: 240px; }
   .welcome-title b {
     color: #e7dece;
-    /* @include animation(colorloop, 3s, infinite); */
+    -webkit-animation: colorloop 3s infinite;
+    -moz-animation: colorloop 3s infinite;
+    -ms-animation: colorloop 3s infinite;
+    -o-animation: colorloop 3s infinite;
+    animation: colorloop 3s infinite;
     font-weight: 700; }
   @media screen and (min-width: 640px) {
     .welcome-title {
@@ -2516,8 +2520,10 @@ submit.disabled, submit:disabled,
   .section h2 {
     text-align: center; }
 
-/* Blog */
-.featured-blog .blog-post {
+/* About */
+/* Projects */
+.featured-projects .project-post {
+  background: #231f20;
   color: #fdfdfd;
   overflow: hidden;
   min-height: 320px;
@@ -2525,10 +2531,28 @@ submit.disabled, submit:disabled,
   text-align: center;
   width: 100%; }
   @media screen and (min-width: 768px) {
-    .featured-blog .blog-post {
+    .featured-projects .project-post {
       height: 320px;
       width: 50%; } }
-  .featured-blog .blog-post .effect {
+  .featured-projects .project-post .button {
+    position: relative;
+    z-index: 1; }
+    .featured-projects .project-post .button .fa {
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      text-align: center;
+      top: -1em;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      width: 100%; }
+    .featured-projects .project-post .button:hover .fa {
+      opacity: 1;
+      top: -1.5em; }
+  .featured-projects .project-post .effect {
     background: rgba(35, 31, 32, 0.8);
     left: 0;
     height: 100%;
@@ -2536,10 +2560,57 @@ submit.disabled, submit:disabled,
     position: absolute;
     top: 0;
     width: 100%; }
-.featured-blog .button {
+  .featured-projects .project-post .post-chapter {
+    color: #231f20;
+    font-size: 12em;
+    font-weight: 800;
+    left: -10%;
+    line-height: .65em;
+    position: absolute;
+    opacity: .9;
+    text-align: left;
+    top: -10%;
+    width: 120%;
+    word-break: break-all;
+    z-index: 0; }
+  .featured-projects .project-post .post-excerpt {
+    margin: 2em 0 4em;
+    position: relative;
+    text-align: left;
+    text-indent: 2em;
+    z-index: 1; }
+  .featured-projects .project-post .post-title {
+    font-size: 2em;
+    position: relative;
+    z-index: 1; }
+
+/* Client */
+/* Team */
+/* Blog */
+.featured-blogs .blog-post {
+  background: #231f20;
+  color: #fdfdfd;
+  overflow: hidden;
+  min-height: 320px;
+  position: relative;
+  text-align: center;
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .featured-blogs .blog-post {
+      height: 320px;
+      width: 50%; } }
+  .featured-blogs .blog-post .effect {
+    background: rgba(35, 31, 32, 0.8);
+    left: 0;
+    height: 100%;
+    padding: 1em;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+.featured-blogs .button {
   position: relative;
   z-index: 1; }
-  .featured-blog .button .fa-lightbulb-o {
+  .featured-blogs .button .fa {
     left: 0;
     opacity: 0;
     position: absolute;
@@ -2551,10 +2622,10 @@ submit.disabled, submit:disabled,
     -o-transition: all 0.3s;
     transition: all 0.3s;
     width: 100%; }
-  .featured-blog .button:hover .fa-lightbulb-o {
+  .featured-blogs .button:hover .fa {
     opacity: 1;
     top: -1.5em; }
-.featured-blog .post-chapter {
+.featured-blogs .post-chapter {
   color: #231f20;
   font-size: 12em;
   font-weight: 800;
@@ -2567,24 +2638,22 @@ submit.disabled, submit:disabled,
   width: 120%;
   word-break: break-all;
   z-index: 0; }
-.featured-blog .post-excerpt {
+.featured-blogs .post-excerpt {
   margin: 2em 0 4em;
   position: relative;
   text-align: left;
   text-indent: 2em;
   z-index: 1; }
-.featured-blog .post-title {
+.featured-blogs .post-title {
   font-size: 2em;
   position: relative;
   z-index: 1; }
 
-.post {
-  max-width: 44em; }
-  .post .chapter {
-    font-size: 3em;
-    font-weight: 700;
-    line-height: 1em;
-    word-break: break-all; }
+.post .chapter {
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1em;
+  word-break: break-all; }
 
 .comments .comments-list .avatar {
   width: auto; }

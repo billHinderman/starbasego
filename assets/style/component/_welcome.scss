@@ -21,7 +21,7 @@
   width: 240px;
   b {
     color: $s-tan;
-    /* @include animation(colorloop, 3s, infinite); */
+    @include animation(colorloop, 3s, infinite);
     font-weight: 700;
   }
   &:hover {
@@ -40,9 +40,85 @@
   }
 }
 
+/* About */
+
+/* Projects */
+.featured-projects {
+  .project-post {
+    background: $black;
+    color: $white;
+    overflow: hidden;
+    min-height: 320px;
+    position: relative;
+    text-align: center;
+    width: 100%; 
+    @media screen and (min-width: $medium) {
+      height: 320px;
+      width: 50%; 
+    }
+    .button {
+      position: relative;
+      z-index: 1;
+      .fa {
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        text-align: center;
+        top: -1em;
+        @include transition(all $transition-static);
+        width: 100%;
+      }
+      &:hover .fa {
+        opacity: 1;
+        top: -1.5em;
+      }
+    }
+    .effect {
+      background: rgba($black, 0.8);
+      left: 0;
+      height: 100%;
+      padding: 1em;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    .post-chapter {
+      color: $black;
+      font-size: 12em;
+      font-weight: 800;
+      left: -10%;
+      line-height: .65em;
+      position: absolute;
+      opacity: .9;
+      text-align: left;
+      top: -10%;
+      width: 120%;
+      word-break: break-all;
+      z-index: 0;
+    }
+    .post-excerpt {
+      margin: 2em 0 4em;
+      position: relative;
+      text-align: left;
+      text-indent: 2em;
+      z-index: 1;
+    }
+    .post-title {
+      font-size: 2em;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+/* Client */
+
+/* Team */
+
 /* Blog */
-.featured-blog {
+.featured-blogs {
   .blog-post {
+    background: $black;
     color: $white;
     overflow: hidden;
     min-height: 320px;
@@ -67,7 +143,7 @@
   .button {
     position: relative;
     z-index: 1;
-    .fa-lightbulb-o {
+    .fa {
       left: 0;
       opacity: 0;
       position: absolute;
@@ -76,7 +152,7 @@
       @include transition(all $transition-static);
       width: 100%;
     }
-    &:hover .fa-lightbulb-o {
+    &:hover .fa {
       opacity: 1;
       top: -1.5em;
     }
