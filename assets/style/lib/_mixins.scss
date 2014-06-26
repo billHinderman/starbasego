@@ -14,6 +14,7 @@ MIXINS
   -ms-animation: $name $time $loop;
   -o-animation: $name $time $loop;
   animation: $name $time $loop;
+  @include hardwareAccelerate();
 }
 
 /* Hardware Accelerate */
@@ -32,6 +33,7 @@ MIXINS
       -ms-transform: $transform;
        -o-transform: $transform;
           transform: $transform;
+@include hardwareAccelerate();
 }
 
 /* Transition */
@@ -41,6 +43,7 @@ MIXINS
   -ms-transition: $transition; 
   -o-transition: $transition;  
   transition: $transition;
+  @include hardwareAccelerate();
 }
 
 
