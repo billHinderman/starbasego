@@ -6,7 +6,7 @@ Base
 ******************************/
 button, 
 .button, 
-input[type=submit], 
+input[type="submit"], 
 .submit:visited, 
 .button:visited {
   background: transparent;
@@ -18,10 +18,11 @@ input[type=submit],
   padding: .25em 1em;
   position: relative;
   text-transform: uppercase;
+  -webkit-appearance: none;
   @include transition(all $transition-static);
   &:hover {
-    border-color: $v-blue !important;
-    color: $v-blue !important;
+    border-color: $maroon !important;
+    color: $maroon !important;
   }
 }
 /******************************

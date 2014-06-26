@@ -11,35 +11,7 @@ Main
   box-sizing: border-box;
 }
 body {
-  background: linear-gradient(to bottom, #03061c,
-                                         #03061c 5%, 
-                                         #08162b 8%, 
-                                         #143e52 12%, 
-                                         #308b9b 20%, 
-                                         #3ca1ae 22%, 
-                                         #4ab2bc 25%, 
-                                         #59bfbc 26%, 
-                                         #78cfbc 29%, 
-                                         #afe0bc 32%, 
-                                         #d7e9bc 35%, 
-                                         #f0eebc 37%, 
-                                         #fdeeaf 40%, 
-                                         #ffee7a 47%, 
-                                         #ffe466 50%, 
-                                         #ffc552 55%, 
-                                         #ffa04b 60%, 
-                                         #f28c4b 62%, 
-                                         #e37f50 64%, 
-                                         #c86b5d 66%, 
-                                         #81417d 72%, 
-                                         #683383 74%, 
-                                         #582a83 75%, 
-                                         #47227c 78%, 
-                                         #361a6e 82%, 
-                                         #1d114f 87%, 
-                                         #0b0b35 92%, 
-                                         #03082b 95%, 
-                                         #03082b 100%);
+  background: $yellow;
   color: $black;
 }
 .container {
@@ -47,6 +19,14 @@ body {
   margin: 0 auto;
   padding: 0 2%;
   width: 100%;
+}
+::selection {
+  background: $black;
+  color: $white;
+}
+::-moz-selection {
+  background: $black;
+  color: $white;
 }
 
 /******************************

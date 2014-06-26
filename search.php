@@ -2,7 +2,7 @@
 
 <?php if ( have_posts() ) : ?>
 	
-	<h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'starbasego' ), get_search_query() ); ?></h1>
+	<h1 class="result-title"><?php printf( __( 'Search Results for: %s', 'starbasego' ), get_search_query() ); ?></h1>
 	
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php get_template_part( 'entry' ); ?>
@@ -15,7 +15,6 @@
 		
 		<section class="entry-content">
 			<p><?php _e( 'Sorry, nothing matched your search. Please try again.', 'starbasego' ); ?></p>
-			<?php get_search_form(); ?>
 		</section>
 	</article>
 <?php endif; ?>

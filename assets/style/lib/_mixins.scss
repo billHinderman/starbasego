@@ -42,3 +42,13 @@ MIXINS
   -o-transition: $transition;  
   transition: $transition;
 }
+
+
+@mixin grid ($color) {
+  background-image: linear-gradient($color 2px, transparent 2px),
+linear-gradient(90deg, $color 2px, transparent 2px),
+linear-gradient(rgba($color,.6) 1px, transparent 1px),
+linear-gradient(90deg, rgba($color,.6) 1px, transparent 1px);
+background-size:50px 50px, 50px 50px, 10px 10px, 10px 10px;
+background-position:-1px -1px, -1px -1px, 0px 0px, 0px 0px;
+}

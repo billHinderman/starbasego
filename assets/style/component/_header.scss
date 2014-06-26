@@ -1,7 +1,6 @@
 .header {
 	background: $white;
 	display: block;
-	padding: .5em;
 	position: relative;
 	@include transition(margin-left $transition-standard);
 	width: 100%;
@@ -22,38 +21,82 @@
 .header-nav {
 	display: block;
 	height: 100%;
-	margin-right: 320px;
+	margin: 4em 320px 0 0;
 	position: fixed;
 	right: 0px;
 	top: 0;
 	@include transition(margin-right $transition-standard);
 	width: 320px;
 	z-index: 0;
+	.nav-home {
+		color: $black;
+		border-bottom: none;
+		display: block;
+		font-size: .75em;
+	  left: 0;
+	  padding: 1em 1.5em;
+	  margin-top: -4em;
+	  position: absolute;
+	  text-transform: uppercase;
+	  @include transition(color $transition-standard);
+	  top: 0;
+	}
 	.nav-menu {
-		font-weight: 300;
-		margin: 4em 0 0;
+		font-weight: 100;
+		margin: .5em;
+		padding: .5em;
 		text-transform: uppercase;
-		@include transition(margin-left $transition-standard);
-		&:hover {
-			margin-left: -.25em;
-		}
-		li {
-			@include long-shadow($type: text, $color: $s-white, $length: 350, $fadeout: false, $skew: false, $direction: left);
-			&:nth-of-type(2n) {
-				@include long-shadow($type: text, $color: $white, $length: 700, $fadeout: false, $skew: false, $direction: right);
+		a {
+			color: $white;
+			font-weight: 300;
+			&:hover {
+				border-color: $black;
+				color: $black;
 			}
 		}
-		a {
-			color: $black;
+		.all-link {
+			margin: .325 0;
+		}
+		h3 {
+			font-family: $script;
+			padding-bottom: .125em;
+			text-transform: none;
+		}
+		.posts-link {
+			display: inline-block;
+			margin-bottom: .25em;
+		}
+		.header-link {
+			background: $white;
 			display: block;
-			font-size: 2em;
-			line-height: 1.5em;
-			padding: 0 .25em;
-			position: relative;
-			@include transition(margin-left $transition-standard);
-			&:active,
-			&:hover {
-				margin-left: 1em;
+			@media screen and (min-height: $s-m) {
+				border-radius: 50%;
+				float: left;
+				margin-bottom: .5em;
+				a {
+					border-radius: 50%;
+					height: 140px;
+					width: 140px;
+				}
+
+				&:nth-of-type(even) {
+					margin-right: .5em;
+				}
+				&:nth-of-type(odd) {
+					text-align: right;
+				}
+			}
+			a {
+				background: rgba($white,.8);
+				border: none;
+				color: $black;
+				display: block;
+				font-weight: 400;
+				padding: .5em;
+				&:hover {
+					background: $black;
+					color: $white;
+				}
 			}
 		}
 	}
@@ -64,14 +107,16 @@
 }
 
 .nav-toggle {
+	border-bottom: none;
 	cursor: pointer;
 	display: block;
   padding: 2em 1em;
   position: fixed;
   right: 0;
   top: 0;
+  z-index: 3;
   .nav-icon {
-  	background: $s-tan;
+  	background: $yellow;
   	content: "";
   	display: block;
   	height: .125em;
@@ -83,7 +128,7 @@
 	    content: "";
 	    height: .125em;
 	    width: 2em;
-	    background: $s-tan;
+	    background: $yellow;
 	    position: absolute;
 	    @include transition(all .3s);
 	  }
@@ -95,23 +140,23 @@
   	}
   }
   .nav-text {
-  	color: $s-tan;
+  	color: $yellow;
   	font-size: .75em;
   	left: -2.25em;
   	position: absolute;
   	text-transform: uppercase;
-  	top: 2em;
+  	top: 2.25em;
   	@include transition(all .3s);
   }
-}
-.menu .nav-toggle .nav-text {
-	color: $black;
 }
 
 .menu .header-nav {
 	margin-right: 0;
 }
 
+.menu .nav-text {
+	color: $black;
+}
 .menu .nav-toggle .nav-icon,
 .menu .header-nav .nav-toggle .nav-icon {
 	background: transparent;
@@ -125,4 +170,60 @@
   	@include transform(rotate(-45deg));
   	top: 0 !important;
   }  
+}
+
+.search-form {
+	margin-left: 1em;
+	position: relative;
+	@include transition(all $transition-static);
+	pointer: cursor;
+	width: 288px;
+	&:hover,
+	&.focus {
+		margin-left: 0;
+		width: 320px;
+		label {
+			border-color: black;
+			color: $black;
+		}
+		input[type="text"] {
+			background: $black;
+			color: $white;
+		}
+		button {
+			color: $white !important;
+			&:focus {
+				color: $white !important;
+			}
+		}
+	}
+	input[type="text"] {
+		background: $white;
+		line-height: 1.25em;
+		margin-top: -2px;
+		padding: .5em;
+		width: 100%;
+	}
+	button[type="submit"] {
+		border: none;
+		color: $black;
+		float: right;
+		font-size: 1.25em;
+		margin-top: -1.9em;
+		width: 2.5em;
+		&:focus {
+			color: $black !important;
+		}
+	}
+	label {
+    border-bottom: .05em solid $white;
+    display: block;
+    font-size: 2em;
+    font-weight: 100;
+    height: .6em;
+    overflow: hidden;
+    text-align: left;
+    text-transform: uppercase;
+    @include transition(all $transition-static);
+  }
 }

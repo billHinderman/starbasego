@@ -64,6 +64,20 @@ function starbasego_comments_number( $count )
 	}
 }
 
+function starbasego_search_form( $form ) {
+    $form = '<form role="search" method="get" id="searchform" class="search-form" action="' . home_url( '/' ) . '" >
+    	<label class="screen-reader-text" for="s">' . __( 'Search' ) . '</label>
+    	<input type="text" value="' . get_search_query() . '" placeholder="Mies van der Rohe" name="s" id="s" />
+    	<button type="submit" id="searchsubmit">
+    		<i class="fa fa-search"></i>
+    	</button>
+    </form>';
+
+    return $form;
+}
+
+add_filter( 'get_search_form', 'starbasego_search_form' );
+
 function starbasego_theme_customizer( $wp_customize ) {
   $wp_customize->add_section( 'starbasego_logo_section' , array(
 		'title'       => __( 'Logo', 'starbasego' ),

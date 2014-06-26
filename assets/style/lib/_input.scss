@@ -1,20 +1,20 @@
 /************************************************************
 INPUT
 ************************************************************/
-input:not([type=submit]):not([type=file]),
+input:not([type="submit"]):not([type="file"]),
 textarea,
 .input,
 .textarea {
    background: $white;
-   border: 1px solid $greyMd;
-   color: $greyDk;
-   font-family: $serif;
+   border: none;
+   color: $black;
    display: block;
+   font-family: $serif;
    font-size: 16px;
    line-height: 20px;
    min-width: 280px;
-   max-width: 300px;
-   padding: 4px;
+   -webkit-appearance: none;
+   width: 100%;
    @include transition(all $transition-static);
    &:hover,
    &:focus {
@@ -29,9 +29,29 @@ textarea,
    	max-width: none;
    }
 }
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+     -webkit-appearance: none;
+     border-radius: 0;
+}
 label,
 .label {
-	color: $greyMd;
+	color: $white;
 	display: block;
-	margin-top: 16px;
+}
+
+span.wpcf7-not-valid-tip {
+   color: $red !important;
+   font-weight: 100;
+   font-size: 12px !important;
+   text-transform: uppercase;
+}
+.wpcf7-response-output.wpcf7-validation-errors {
+   border: none;
+   color: $white;
+   font-weight: 100;
+   font-size: 12px;
+   text-transform: uppercase;
 }

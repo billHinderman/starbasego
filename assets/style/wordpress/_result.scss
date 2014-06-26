@@ -1,0 +1,27 @@
+.result {
+	background: $maroon;
+	border: none;
+	display: block;
+	@media screen and (min-width: $medium) {
+		float: left;
+		width: 50%;
+	}
+	.result-container {
+		display: table;
+		height: 320px;
+		width: 100%;
+	}
+	.result-info {
+		display: table-cell;
+		text-align: center;
+		padding: 2em;
+		vertical-align: middle;
+	}
+	h3 {
+		color: $white;
+		font-size: 2em;
+		font-weight: 100;
+		line-height: 1em;
+		text-transform: uppercase;
+	}
+}

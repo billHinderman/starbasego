@@ -6,21 +6,24 @@ Base
 ******************************/
 a, .link,
 a:visited, .link:visited {
-  color: $s-blue;
+  border-bottom: 1px solid transparent;
+  color: $yellow;
   @include transition(all $transition-static);
   text-decoration: none;
   &:active,
   &:hover {
+    border-color: inherit;
     color: inherit;
   }
+
   &[rel^="external"],
   &[rel*=" external"],
   &[target^="blank"],
   &[target*="blank "],
-  &:not([href*="website.com"]),
+  &:not([href*="starbasego.com"]),
   &:not([href^="/"]),
   &:not([href^="#"]),
   &.external {
-    //external styles
+    
   }
 }

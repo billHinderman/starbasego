@@ -6,26 +6,28 @@ TYPOGRAPHY
 Default
 ******************************/
 body {
-  color: $greyDk;
+  color: $black;
   font-family: $sans;
   font-size: 1em;
-  line-height: 1.25em;
   text-rendering: optimizelegibility;
 }
 
 /******************************
 Font Options
 ******************************/
-.font-heading {
+.f-heading {
   font-family: $heading;
 }
-.font-mono {
+.f-mono {
   font-family: $mono;
 }
-.font-sans {
+.f-other {
+  font-family: $other;
+}
+.f-sans {
   font-family: $sans;
 }
-.font-serif {
+.f-serif {
   font-family: $serif;
 }
 
@@ -38,6 +40,21 @@ h1,
   font-size: 3em;
   font-weight: 100;
   line-height: 1.1em;
+  &.three-up {
+    text-transform: uppercase;
+    line-height: .7em;
+    [class^="word"]:after {
+      display: block;
+      content: "";
+    }
+    [class^="word"]:last-of-type {
+      font-weight: 700;
+    }
+    [class^="char"]:nth-of-type(3n):after {
+      display: block;
+      content:"";
+    }
+  }
 }
 h2, 
 .h2 {
@@ -72,12 +89,7 @@ h6,
 /******************************
 Copy
 ******************************/
-p, 
-.p {
-  line-height: 1.25em;
-  margin-bottom: 1em;
-}
-bold, 
+b, 
 .bold {
   font-weight: 700;
 }
@@ -87,8 +99,13 @@ bold,
 .thin {
   font-weight: 100;
 }
-em, .italic {
-  font-style: italic;
+em {
+  background: $black;
+  color: $white;
+  font-family: $sans;
+  font-size: .75em;
+  font-style: normal;
+  padding: .1667em;
 }
 .lowercase {
   text-transform: lowercase;
@@ -166,9 +183,10 @@ blockquote,
 q, 
 .blockquote,
 .quote {
-  font-family: $serif;
+  font-family: $sans;
+  font-weight: 400;
   font-size: 1.5em;
-  margin: .5em 0;
+  margin: 1em .5em;
   &.callout {
     border-left: 1px dotted $greyMd;
     padding-left: .5em;
@@ -204,5 +222,23 @@ pre,
   &.callout {
     border: 1px dotted $greyMd;
     padding: .5em;
+  }
+}
+
+/******************************
+SBG
+******************************/
+.sbg {
+  background: $black;
+  color: $white;
+  font-family: $sans;
+  font-weight: 100;
+  font-size: 0.75em;
+  padding: 0.1667em;
+  text-transform: uppercase;
+  .char9,
+  .char10,
+  .char11 {
+    font-weight: 700;
   }
 }

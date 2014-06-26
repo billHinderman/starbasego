@@ -5,7 +5,4 @@
 	<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
 <?php endwhile; endif; ?>
 
-<?php get_template_part( 'nav', 'below-single' ); ?>
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

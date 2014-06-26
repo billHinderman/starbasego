@@ -3,25 +3,30 @@
   }
 
 .welcome {
+  background: $mv;
   margin-top: -5em;
   padding: 0;
   position: relative;
+  width: 100%;
   z-index: 2;
 }
 
+.welcome-table {
+  display: table;
+}
+
 .welcome-title {
-  color: $s-tan;
+  color: $white;
   font-family: $sans;
+  display: table-cell;
+  vertical-align: middle;
   font-size: 6em;
   font-weight: 100;
   line-height: .7em;
   padding: 1em 16px;
   text-transform: uppercase;
   word-break: break-all;
-  width: 240px;
   b {
-    color: $s-tan;
-    @include animation(colorloop, 3s, infinite);
     font-weight: 700;
   }
   &:hover {
@@ -32,94 +37,78 @@
     width: 320px;
   }
 }
-
-.section {
-  margin: auto;
-  h2 {
-    text-align: center;  
+h2 {
+    border-bottom: .05em solid $maroon;
+    color: $maroon;
+    font-size: 3em;
+    line-height: 1em;
+    height: .6em;
+    margin: -.6em auto 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 2;
+    @media screen and (min-width: $s-m) {
+      font-size: 6em;
+    }
+    &.invert {
+      border-color: $white;
+      color: $white;
+    }
   }
+.section {
+  overflow: hidden;
 }
 
 /* About */
+.about {
+  display: table;
+  position: relative;
+}
+.about-info {
+  color: $yellow;
+  font-family: $script;
+  font-size: 46em;
+  font-weight: 100;
+  left: -1em;
+  line-height: .6em;
+  position: absolute;
+  width: 4em;
+  word-break: break-all;
+  z-index: 1;
+  @media screen and (min-width: $medium) {
+      font-size: 54em;
+  }
+}
+.about-post {
+  @include grid($white);
+  display: table-cell;
+  font-family: $serif;
+  font-size: 2em;
+  font-weight: 100;
+  line-height: 1.15em;
+  padding: 2em 4%;
+  position: relative;
+  vertical-align: middle;
+  z-index: 2;
+  width: 100%;
+  @media screen and (min-width: $medium) {
+    font-size: 3em;
+    padding: 180px 8%;
+  }
+}
+
+/* Services */
+.services {
+  background: $mv;
+}
 
 /* Projects */
 .featured-projects {
   .project-post {
-    background: $black;
-    color: $white;
-    overflow: hidden;
-    min-height: 320px;
-    position: relative;
-    text-align: center;
-    width: 100%; 
-    @media screen and (min-width: $medium) {
-      height: 320px;
-      width: 50%; 
-    }
-    .button {
-      position: relative;
-      z-index: 1;
-      .fa {
-        left: 0;
-        opacity: 0;
-        position: absolute;
-        text-align: center;
-        top: -1em;
-        @include transition(all $transition-static);
-        width: 100%;
-      }
-      &:hover .fa {
-        opacity: 1;
-        top: -1.5em;
-      }
-    }
-    .effect {
-      background: rgba($black, 0.8);
-      left: 0;
-      height: 100%;
-      padding: 1em;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-    .post-chapter {
-      color: $black;
-      font-size: 12em;
-      font-weight: 800;
-      left: -10%;
-      line-height: .65em;
-      position: absolute;
-      opacity: .9;
-      text-align: left;
-      top: -10%;
-      width: 120%;
-      word-break: break-all;
-      z-index: 0;
-    }
-    .post-excerpt {
-      margin: 2em 0 4em;
-      position: relative;
-      text-align: left;
-      text-indent: 2em;
-      z-index: 1;
-    }
-    .post-title {
-      font-size: 2em;
-      position: relative;
-      z-index: 1;
-    }
-  }
-}
-
-/* Client */
-
-/* Team */
-
-/* Blog */
-.featured-blogs {
-  .blog-post {
-    background: $black;
-    color: $white;
+    background: $white;
+    color: $black;
     overflow: hidden;
     min-height: 320px;
     position: relative;
@@ -131,7 +120,7 @@
     }
 
     .effect {
-      background: rgba($black, 0.8);
+      background: linear-gradient(to bottom, $white, rgba($white,.8) 100%);
       left: 0;
       height: 100%;
       padding: 1em;
@@ -141,6 +130,8 @@
     }
   }
   .button {
+    border-color: $black;
+    color: $black;
     position: relative;
     z-index: 1;
     .fa {
@@ -158,9 +149,9 @@
     }
   }
   .post-chapter {
-    color: $black;
-    font-size: 12em;
-    font-weight: 800;
+    color: $white;
+    font-size: 18em;
+    font-weight: 100;
     left: -10%;
     line-height: .65em;
     position: absolute;
@@ -179,7 +170,246 @@
     z-index: 1;
   }
   .post-title {
+    font-family: $script;
+    font-size: 3em;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* Client */
+.featured-client {
+  background: $mv;
+}
+
+/* Team */
+.team {
+  padding: 2em 0 6em;
+  li {
+    display: table;
+    height: 320px;
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: $m-l) {
+      width: 50%;
+    }
+    .role {
+      font-weight: 100;
+      font-family: $script;
+    }
+    .team-info {
+      display: block;
+      padding: 1em;
+      vertical-align: middle;
+      @media screen and (min-width: $s-m) {
+        display: table-cell;
+        width: 60%;
+      }
+    }
+    .team-photo-container {
+      display: block;
+      height: 144px;
+      vertical-align: middle;
+      padding-left: 1em;
+      @media screen and (min-width: $s-m) {
+        display: table-cell;
+        width: 144px;
+      }
+    }
+    .team-photo {
+      background: $maroon;
+      border: .25em solid $white;
+      border-radius: 50%;
+      height: 144px;
+      position: relative;
+      margin: auto;
+      width: 144px;
+      &:after {
+        border-radius: 50%;
+        border: .25em solid $black;
+        content: "";
+        display: block;
+        height: 152px;
+        left: -8px;
+        position: absolute;
+        top: -8px;
+        width: 152px;
+      }
+    }
+  }
+}
+
+/* Contact */
+.contact {
+  background: $mv;
+  color: $white;
+  display: table;
+  padding: 2em 4% 4em;
+  width: 100%;
+  label span {
+    border-bottom: .05em solid $white;
+    display: block;
     font-size: 2em;
+    font-weight: 100;
+    height: .6em;
+    overflow: hidden;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  input:not([type=submit]):not([type=file]),
+  textarea,
+  .input,
+  .textarea {
+    margin: -2px 0 1em;
+    padding: .5em;
+    &:invalid:not(:focus),
+    &:-moz-ui-invalid:not(:focus) {
+      color: $red;
+    }
+  }
+  button {
+    border-color: $white;
+    color: $white;
+    margin-top: 1em;
+    position: relative;
+    width: 172px;
+    z-index: 1;
+    &:hover {
+      border-color: $yellow !important;
+      color: $yellow !important;
+    }
+    .fa {
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      text-align: center;
+      top: -1em;
+      @include transition(all $transition-static);
+      width: 100%;
+    }
+    &:hover .fa {
+      opacity: 1;
+      top: -1.5em;
+    }
+  }
+
+  .contact-half {
+    text-align: center;
+    @media screen and (min-width: $medium) {
+      display: table-cell;
+      min-height: 320px;
+      padding: 2em 4% 4em;
+      vertical-align: middle;
+      width: 50%; 
+    }
+  }
+  h3 {
+    border-bottom: .05em solid $white;
+    display: inline-block;
+    font-size: 3em;
+    height: .6em;
+    margin-top: 32px;
+    overflow: hidden;
+    text-transform: uppercase;
+    @media screen and (min-width: $s-m) {
+      font-size: 3em;
+    }
+    @media screen and (min-width: $medium) {
+      margin-top: 0;
+    }
+  }
+  .contact-list {
+    display: inline-block;
+    font-size: 2em;
+    dd {
+      display: block;
+      float: left;
+      font-size: .375em;
+      font-weight: 400;
+      line-height: 38px;
+      text-transform: uppercase;
+    }
+    dt {
+      clear: left;
+      display: block;
+      float: left;
+      font-family: $script;
+      line-height: 38px;
+      text-align: right;
+      margin-right: .25em;
+      width: 3em;
+    }
+  }
+}
+
+/* Blog */
+.featured-blogs {
+  .blog-post {
+    background: $white;
+    color: $black;
+    overflow: hidden;
+    min-height: 320px;
+    position: relative;
+    text-align: center;
+    width: 100%; 
+    @media screen and (min-width: $medium) {
+      height: 320px;
+      width: 50%; 
+    }
+
+    .effect {
+      background: linear-gradient(to bottom, $white, rgba($white,.8) 100%);
+      left: 0;
+      height: 100%;
+      padding: 1em;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+  .button {
+    border-color: $black;
+    color: $black;
+    position: relative;
+    z-index: 1;
+    .fa {
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      text-align: center;
+      top: -1em;
+      @include transition(all $transition-static);
+      width: 100%;
+    }
+    &:hover .fa {
+      opacity: 1;
+      top: -1.5em;
+    }
+  }
+  .post-chapter {
+    color: $white;
+    font-size: 18em;
+    font-weight: 100;
+    left: -10%;
+    line-height: .65em;
+    position: absolute;
+    opacity: .9;
+    text-align: left;
+    top: -10%;
+    width: 120%;
+    word-break: break-all;
+    z-index: 0;
+  }
+  .post-excerpt {
+    margin: 2em 0 4em;
+    position: relative;
+    text-align: left;
+    text-indent: 2em;
+    z-index: 1;
+  }
+  .post-title {
+    font-family: $script;
+    font-size: 3em;
     position: relative;
     z-index: 1;
   }

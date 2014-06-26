@@ -1,8 +1,113 @@
 .post {
+	margin-top: -5em;
 	.chapter {
-		font-size: 3em;
-		font-weight: 700;
+		background: $maroon;
+		display: table;
+		font-weight: 100;
 		line-height: 1em;
-		word-break: break-all;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		.entry-title {
+			color: $white;
+			font-size: 3em;
+			font-weight: 100;
+			display: table-cell;
+			vertical-align: middle;
+			line-height: .7em;
+			text-align: center;
+			text-transform: uppercase;
+			padding: 1em 16px;
+			word-break: break-word;
+			width: 100%;
+			@media screen and (min-width: $medium) {
+		    font-size: 6em;
+		  }
+		}
+	}
+	.entry {
+		font-size: 1.5em;
+		font-weight: 300;
+		line-height: 1.5em;
+		position: relative;
+		margin: auto;
+		max-width: 42em;
+		padding: 1em;
+		.chapter-author {
+			font-weight: 400;
+			font-size: .5em;
+			text-align: center;
+			margin: -1em 0 3em;
+			position: relative;
+			text-transform: uppercase;
+			a:before {
+				content: "\f040";
+				font-family: FontAwesome;
+				left: 0;
+	      opacity: 0;
+	      position: absolute;
+	      text-align: center;
+	      top: -1em;
+	      @include transition(all $transition-static);
+	      width: 100%;
+			}
+			a:hover:before {
+				opacity: 1;
+	      top: -1.25em;
+			}
+		}
+		.chapter-info {
+			color: $white;
+			font-family: $script;
+			font-size: 1em;
+			line-height: 1em;
+			margin-left: -.8em;
+			position: absolute;
+			text-align: center;
+			white-space: nowrap;
+			top: -.4em;
+			width: 100%;
+			@media screen and (min-width: $s-m) {
+		    font-size: 2em;
+		  }
+		}
+		p {
+			margin-bottom: 1em;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.post-end {
+		font-size: .5em;
+		font-weight: 400;
+		padding-top: 1em;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.tag-links {
+		font-size: .5em;
+		font-weight: 400;
+		padding-top: 1em;
+		text-transform: uppercase;
+		a {
+			line-height: 1em;
+			position: relative;
+		}
+		a:before {
+			content: "\f02b";
+			font-family: FontAwesome;
+			left: 0;
+      opacity: 0;
+      position: absolute;
+      text-align: center;
+      top: -1em;
+      @include transition(all $transition-static);
+      width: 100%;
+		}
+		a:hover:before {
+			opacity: 1;
+      top: -1.25em;
+		}
 	}
 }

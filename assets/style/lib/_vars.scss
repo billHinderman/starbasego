@@ -11,15 +11,19 @@ $greyDk: #333333;
 $greyLt: #f0f0f0;
 $greyMd: #6d7377;
 $indigo: #4b0082;
+$maroon: #790f5b;
 $orange: #e67e22;
 $red: #f74224;
-$violet: #8e44ad;
+$violet: #43256c;
 $white: #fdfdfd;
 $yellow: #f1c40f;
+$yellowLt: #fee54e;
+
+$mv: linear-gradient(to right, $maroon 50%, $violet 50%);
 
 $s-blue: #80a1a3;
 $s-tan: #e7dece;
-$s-white: #f7f5e2;
+$s-white: #f7f2eb;
 
 $v-blue: #69D2E7;
 $v-aqua: #A7DBD8;
@@ -42,8 +46,9 @@ Fonts
 $heading: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 $sans: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif: Georgia, Times, "Times New Roman", serif;
-$script: "bistro-script-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$other: "mostra-nuova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif: "calluna", Georgia, Times, "Times New Roman", serif;
+$script: "acta-poster-swashes", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /******************************
 Transition

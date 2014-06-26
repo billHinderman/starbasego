@@ -28,7 +28,7 @@
   75%  {background:$v-aqua;}
   100%  {background:$s-blue;}
 }
-
+/*
 @mixin long-shadow($type, $color, $length, $fadeout: true, $skew: false, $direction: right){
   $shadow: '';
   @if $skew == false or $type == text{
@@ -77,3 +77,4 @@
   @if $type == 'box' {box-shadow: $shadow;}
   @if $type == 'text' {text-shadow: $shadow;}
 }
+*/
