@@ -78,3 +78,105 @@
   @if $type == 'text' {text-shadow: $shadow;}
 }
 */
+
+
+
+@keyframes menuIn {
+  0% {
+    @include hardwareAccelerate();
+    @include transform(rotate(0) scale(1));
+  }
+  7.5% {
+   @include transform(rotate(0) scale(.85)); 
+  }
+  15% {
+   @include transform(rotate(0) scale(1.25)); 
+  }
+  50% {
+   @include transform(rotate(90deg) scale(0));
+  }
+  85% {
+   @include transform(rotate(180deg) scale(1.25)); 
+  }
+  92.5% {
+   @include transform(rotate(0) scale(.85)); 
+  }
+  100% {
+    @include transform(rotate(180deg) scale(1));
+  }
+}
+@-webkit-keyframes menuIn {
+  0% {
+    @include hardwareAccelerate();
+    @include transform(rotate(0) scale(1));
+  }
+  7.5% {
+   @include transform(rotate(0) scale(.85)); 
+  }
+  15% {
+   @include transform(rotate(0) scale(1.15)); 
+  }
+  50% {
+   @include transform(rotate(90deg) scale(0));
+  }
+  85% {
+   @include transform(rotate(180deg) scale(1.15)); 
+  }
+  92.5% {
+   @include transform(rotate(0) scale(.85)); 
+  }
+  100% {
+    @include transform(rotate(180deg) scale(1));
+  }
+}
+
+
+@keyframes menuOut {
+  0% {
+    @include hardwareAccelerate();
+    @include transform(rotate(0) scale(1));
+  }
+  7.5% {
+   @include transform(rotate(0) scale(.85)); 
+  }
+  15% {
+   @include transform(rotate(0) scale(1.25)); 
+  }
+  50% {
+   @include transform(rotate(90deg) scale(0));
+  }
+  85% {
+   @include transform(rotate(180deg) scale(1.25)); 
+  }
+  92.5% {
+   @include transform(rotate(0) scale(.85)); 
+  }
+  100% {
+    @include transform(rotate(180deg) scale(1));
+  }
+}
+@-webkit-keyframes menuOut {
+  0% {
+    @include hardwareAccelerate();
+    @include transform(rotate(0) scale(1));
+  }
+  7.5% {
+   @include transform(rotate(0) scale(.85)); 
+  }
+  15% {
+   @include transform(rotate(0) scale(1.15)); 
+  }
+  50% {
+   @include transform(rotate(90deg) scale(0));
+  }
+  85% {
+   @include transform(rotate(180deg) scale(1.15)); 
+  }
+  92.5% {
+   @include transform(rotate(0) scale(.85)); 
+  }
+  100% {
+    @include transform(rotate(180deg) scale(1));
+  }
+}
+

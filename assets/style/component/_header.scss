@@ -21,11 +21,10 @@
 .header-nav {
 	display: block;
 	height: 100%;
-	margin: 4em 320px 0 0;
+	margin: 4em 0 0 0;
 	position: fixed;
 	right: 0px;
 	top: 0;
-	@include transition(margin-right $transition-standard);
 	width: 320px;
 	z-index: 0;
 	.nav-home {
@@ -109,67 +108,43 @@
 .nav-toggle {
 	border-bottom: none;
 	cursor: pointer;
+	color: $yellow;
 	display: block;
-  padding: 2em 1em;
+	height: 3em;
+  margin: .5em;
   position: fixed;
   right: 0;
   top: 0;
+  @include transition(all .45s .45s);
   z-index: 3;
+  width: 3em;
   .nav-icon {
-  	background: $yellow;
-  	content: "";
+    color: $yellow;
   	display: block;
-  	height: .125em;
-  	position: relative;
-  	width: 2em;
-  	@include transition(all .3s);
-  	&:after, &:before {
-	    display: block;
-	    content: "";
-	    height: .125em;
-	    width: 2em;
-	    background: $yellow;
-	    position: absolute;
-	    @include transition(all .3s);
-	  }
-	  &:after { 
-	  	top: -.625em; 
-	  }
-  	&:before { 
-  		top: .625em; 
-  	}
+    font-size: 1.5em;
+  	height: 1em;
+  	left: .5em;
+  	position: absolute;
+    text-align: center;
+    top: .5em;
+  	@include transition(all .45s .45s);
+  	width: 1em;
   }
   .nav-text {
-  	color: $yellow;
-  	font-size: .75em;
-  	left: -2.25em;
-  	position: absolute;
-  	text-transform: uppercase;
-  	top: 2.25em;
-  	@include transition(all .3s);
+  	display: none;
   }
 }
 
-.menu .header-nav {
-	margin-right: 0;
-}
-
-.menu .nav-text {
+.menu .nav-toggle .nav-icon {
 	color: $black;
 }
-.menu .nav-toggle .nav-icon,
-.menu .header-nav .nav-toggle .nav-icon {
-	background: transparent;
-  &:after { 
-  	background: $black;
-  	@include transform(rotate(45deg));
-  	top: 0 !important; 
-  }  
-  &:before { 
-  	background: $black;
-  	@include transform(rotate(-45deg));
-  	top: 0 !important;
-  }  
+
+.menu .nav-toggle {
+  @include animation(menuIn, .9s, 1);
+}
+
+.no-menu .nav-toggle {
+  @include animation(menuOut, .9s, 1);
 }
 
 .search-form {

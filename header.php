@@ -16,7 +16,7 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<header class="header" role="banner">
-			<a class="nav-toggle" data-menu><span class="nav-text">Menu</span><i class="nav-icon"></i></a>
+			<a class="nav-toggle" data-menu><span class="nav-text">Menu</span><i class="nav-icon fa fa-bars"></i></a>
 		</header>
 		<nav class="header-nav" role="navigation">
 				<a class="link nav-home" href="/">Home</a>
