@@ -9,7 +9,6 @@
 	padding: 1.33em 2em;
 	position: relative;
 	text-transform: uppercase;
-	@include transition(margin-left $transition-standard);
 	width: 100%;
 	z-index: 1;
 
@@ -45,6 +44,13 @@
 		}
 	}
 }
+
 .menu .footer {
+	@include animation(contentOut, .6s, ease-in-out, 1);
 	margin-left: -320px;
+}
+
+.no-menu .footer {
+	@include animation(contentIn, .6s, ease-in-out, 1);
+	margin-left: 0;
 }

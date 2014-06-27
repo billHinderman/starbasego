@@ -28,58 +28,6 @@
   75%  {background:$v-aqua;}
   100%  {background:$s-blue;}
 }
-/*
-@mixin long-shadow($type, $color, $length, $fadeout: true, $skew: false, $direction: right){
-  $shadow: '';
-  @if $skew == false or $type == text{
-    @if $direction == right {
-      @for $i from 0 to $length - 1 {
-        $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $color + ',';
-      }
-    }
-    @if $direction == left {
-      @for $i from 0 to $length - 1 {
-        $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' + $color + ',';
-       }
-      }
-     }
-        
-   @if $fadeout == true{
-    @for $i from 1 to $length - 1 {
-      @if $type == text or $skew == false{
-        @if $direction == right{
-          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' +       rgba($color, 1 - $i / $length) + ',';
-        }
-        @if $direction == left{
-          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' +       rgba($color, 1 - $i / $length) + ',';
-        }
-      }
-      @if ($type == box) and $skew == true{
-        @if $direction == right {
-          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $i * .2 + 'px ' + rgba($color, 1 - $i / $length) + ',';
-        }
-        @if $direction == left {
-          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' + $i * .2 + 'px ' + rgba($color, 1 - $i / $length) + ',';
-        }
-      }
-  }
-  $shadow: $shadow + $length + 'px ' + $length + 'px 0 ' + rgba($color, 0);
- }
- @if $fadeout == false{
-   @if $skew == true and ( $type == box ){
-     @for $i from 0 to $length - 1 {
-            $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $i * .1 + 'px ' + $color + ',';
-      }
-   }
-    $shadow: $shadow + $length + 'px ' + $length + 'px 0 ' + rgba(0,0,0,0);
- }
- $shadow: unquote($shadow);
-  @if $type == 'box' {box-shadow: $shadow;}
-  @if $type == 'text' {text-shadow: $shadow;}
-}
-*/
-
-
 
 @keyframes menuIn {
   0% {
@@ -99,7 +47,7 @@
    @include transform(rotate(180deg) scale(1.25)); 
   }
   92.5% {
-   @include transform(rotate(0) scale(.85)); 
+   @include transform(rotate(180deg) scale(.85)); 
   }
   100% {
     @include transform(rotate(180deg) scale(1));
@@ -123,7 +71,7 @@
    @include transform(rotate(180deg) scale(1.15)); 
   }
   92.5% {
-   @include transform(rotate(0) scale(.85)); 
+   @include transform(rotate(180deg) scale(.85)); 
   }
   100% {
     @include transform(rotate(180deg) scale(1));
@@ -149,7 +97,7 @@
    @include transform(rotate(180deg) scale(1.25)); 
   }
   92.5% {
-   @include transform(rotate(0) scale(.85)); 
+   @include transform(rotate(180deg) scale(.85)); 
   }
   100% {
     @include transform(rotate(180deg) scale(1));
@@ -173,10 +121,115 @@
    @include transform(rotate(180deg) scale(1.15)); 
   }
   92.5% {
-   @include transform(rotate(0) scale(.85)); 
+   @include transform(rotate(180deg) scale(.85)); 
   }
   100% {
     @include transform(rotate(180deg) scale(1));
   }
 }
 
+
+@keyframes contentIn {
+  0% {
+    @include hardwareAccelerate();
+    margin-left: -320px;
+  }
+  50% {
+    margin-left: -320px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes contentIn {
+  0% {
+    @include hardwareAccelerate();
+    margin-left: -320px;
+  }
+  50% {
+    margin-left: -320px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes contentOut {
+  0% {
+    @include hardwareAccelerate();
+    margin-left: 0;
+  }
+  50% {
+    margin-left: -320px;
+  }
+  100% {
+    margin-left: -320px;
+  }
+}
+
+@-webkit-keyframes contentOut {
+  0% {
+    @include hardwareAccelerate();
+    margin-left: 0;
+  }
+  50% {
+    margin-left: -320px;
+  }
+  100% {
+    margin-left: -320px;
+  }
+}
+
+
+@keyframes sidebarIn {
+  0% {
+    @include hardwareAccelerate();
+    right: 320px;
+  }
+  75% {
+    right: 0;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@-webkit-keyframes sidebarIn {
+  0% {
+    @include hardwareAccelerate();
+    right: 320px;
+  }
+  75% {
+    right: 0;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes sidebarOut {
+  0% {
+    @include hardwareAccelerate();
+    right: 0;
+  }
+  25% {
+    right: 0;
+  }
+  100% {
+    right: 320px;
+  }
+}
+
+@-webkit-keyframes sidebarOut {
+  0% {
+    @include hardwareAccelerate();
+    right: 0;
+  }
+  25% {
+    right: 0;
+  }
+  100% {
+    right: 320px;
+  }
+}

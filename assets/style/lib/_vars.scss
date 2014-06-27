@@ -19,7 +19,7 @@ $white: #fdfdfd;
 $yellow: #f1c40f;
 $yellowLt: #fee54e;
 
-$mv: linear-gradient(to right, $maroon 50%, $violet 50%);
+$mv: $maroon; //linear-gradient(to right, $maroon 50%, $violet 50%);
 
 $s-blue: #80a1a3;
 $s-tan: #e7dece;

@@ -2,7 +2,6 @@
 	background: $white;
 	display: block;
 	position: relative;
-	@include transition(margin-left $transition-standard);
 	width: 100%;
 	z-index: 2;
 
@@ -23,7 +22,7 @@
 	height: 100%;
 	margin: 4em 0 0 0;
 	position: fixed;
-	right: 0px;
+	right: 320px;
 	top: 0;
 	width: 320px;
 	z-index: 0;
@@ -100,11 +99,14 @@
 		}
 	}
 }
-
-.menu .header {
-	margin-left: -320px;
+.menu .header-nav {
+  @include animation(sidebarIn, .9s, ease-in-out, 1);
+  right: 0;
 }
-
+.no-menu .header-nav {
+  @include animation(sidebarOut, .9s, ease-in-out, 1);
+  right: 320px;
+}
 .nav-toggle {
 	border-bottom: none;
 	cursor: pointer;
@@ -140,11 +142,11 @@
 }
 
 .menu .nav-toggle {
-  @include animation(menuIn, .9s, 1);
+  @include animation(menuIn, .6s, ease-in-out, 1);
 }
 
 .no-menu .nav-toggle {
-  @include animation(menuOut, .9s, 1);
+  @include animation(menuOut, .6s, ease-in-out, 1);
 }
 
 .search-form {
