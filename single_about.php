@@ -1,3 +1,10 @@
+<?php
+/*
+Template Name Posts: About
+Description: About page
+*/
+?>
+
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -10,11 +17,12 @@
 			<?php get_template_part( 'entry', ( is_archive() || is_search() ? 'summary' : 'content' ) ); ?>
 
 			<footer class="entry-footer">
-				<div class="tag-links"><?php the_tags('<i class="fa fa-tags"></i> Re: ',', ',''); ?></div	>
 				<div class="post-end">With <i class="fa fa-heart"></i> from space.</div>
 			</footer> 
 		</div>
 	</article>
+
+	<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
 <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

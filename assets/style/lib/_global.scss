@@ -11,7 +11,7 @@ Main
   box-sizing: border-box;
 }
 body {
-  background: $yellow;
+  background: $white;
   color: $black;
 }
 .container {
@@ -21,12 +21,12 @@ body {
   width: 100%;
 }
 ::selection {
-  background: $black;
-  color: $white;
+  background: $yellow;
+  color: $black;
 }
 ::-moz-selection {
-  background: $black;
-  color: $white;
+  background: $yellow;
+  color: $black;
 }
 
 /******************************

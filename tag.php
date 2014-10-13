@@ -1,11 +1,14 @@
 <?php get_header(); ?>
+<div class="result-title">
+	<h1 data-fill="strict" data-fill-size=".666"><?php _e( '', 'starbasego' ); ?><?php single_tag_title(); ?></h1>
+</div>
 
-<h1 class="result-title"><?php _e( '<i class="fa fa-tags"></i> Re: ', 'starbasego' ); ?><?php single_tag_title(); ?></h1>
-
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<?php get_template_part( 'result' ); ?>
-<?php endwhile; endif; ?>
-
-<?php get_template_part( 'nav', 'below' ); ?>
+<div class="results-container">
+	<div class="entry-results-list">
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'entry-result' ); ?>
+		<?php endwhile; endif; ?>
+	</div>
+</div>
 
 <?php get_footer(); ?>

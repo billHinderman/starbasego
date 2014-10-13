@@ -9,6 +9,7 @@
 		<meta name="author" content="<?php bloginfo( 'name' ); ?>" />
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 
+		<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/script/modernizr.js"></script>
 		<script type="text/javascript" src="//use.typekit.net/cqy4fmu.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
@@ -16,48 +17,21 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<header class="header" role="banner">
-			<a class="nav-toggle" data-menu><span class="nav-text">Menu</span><i class="nav-icon fa fa-bars"></i></a>
+			<a class="nav-toggle" data-menu>
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
 		</header>
 		<nav class="header-nav" role="navigation">
-				<a class="link nav-home" href="/">Home</a>
-
-				<?php get_search_form(); ?>
-
-				<?php query_posts('category_name=makes&posts_per_page=2'); ?>
-					<?php if ( have_posts() ) : ?>
-						<ul class="nav-menu float-clear">
-							<li class="float-clear">
-								<h3 class="float-left">Projects</h3>
-								<a class="link float-right all-link" href="http://www.starbasego.com/makes/">All</a>
-							</li>
-
-							<?php while ( have_posts() ) : the_post(); ?>
-								<?php if ( get_post_thumbnail_id() ) : ?>
-								<li data-bg-image="<?php $thumb_id = get_post_thumbnail_id();$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true); echo $thumb_url[0]; ?>" class="header-link">
-								<?php else : ?>
-									<li class="header-link">
-								<?php endif; ?>
-									<a  href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
-								</li>
-							<?php endwhile;?>
-						</ul>
-					<?php endif; ?>
-					<?php wp_reset_query(); ?>
-
-				<?php query_posts('category_name=thinks&tag=featured&posts_per_page=2'); ?>
-					<?php if ( have_posts() ) : ?>
-						<ul class="nav-menu float-clear">
-							<li class="float-clear">
-								<h3 class="float-left">Thoughts</h3>
-								<a class="link float-right all-link" href="http://www.starbasego.com/thinks/">All</a>
-							</li>
-							<?php while ( have_posts() ) : the_post(); ?>
-								<li>
-								  <a class="posts-link" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
-								</li>
-							<?php endwhile;?>
-						</ul>
-					<?php endif; ?>
-					<?php wp_reset_query(); ?>
+			<ul class="header-list">
+				<li><a class="nav-home" href="/"><i class="header-icon fa fa-home"></i>Home<i class="fa fa-angle-right"></i></a></li>
+				<li><a href="/is/this"><i class="header-icon fa fa-users"></i>About<i class="fa fa-angle-right"></i></a></li>
+				<li><a href="/says/hello"><i class="header-icon fa fa-envelope-o"></i>Contact Us<i class="fa fa-angle-right"></i></a></li>
+				<li><a class="separate" href="/says/lets-get-started"><i class="header-icon fa fa-cogs"></i>Plan a Project<i class="fa fa-angle-right"></i></a></li>
+				<li><a href="/does"><i class="header-icon fa fa-bolt"></i>Services<i class="fa fa-angle-right"></i></a></li>
+				<li><a href="/makes"><i class="header-icon fa fa-rocket"></i>Projects<i class="fa fa-angle-right"></i></a></li>
+				<li><a href="/thinks"><i class="header-icon fa fa-lightbulb-o"></i>Thoughts<i class="fa fa-angle-right"></i></a></li>
+			</ul>
 		</nav>
 		<div class="content" id="main" role="main">

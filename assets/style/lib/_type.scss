@@ -21,9 +21,6 @@ Font Options
 .f-mono {
   font-family: $mono;
 }
-.f-other {
-  font-family: $other;
-}
 .f-sans {
   font-family: $sans;
 }
@@ -36,7 +33,7 @@ Headers
 ******************************/
 h1, 
 .h1 {
-  font-family: $heading;
+  font-family: $sans;
   font-size: 3em;
   font-weight: 100;
   line-height: 1.1em;
@@ -60,12 +57,12 @@ h2,
 .h2 {
   font-family: $heading;
   font-size: 2.25em;
-  font-weight: 100;
+  font-weight: 600;
   line-height: 1.1em;
 }
 h3, 
 .h3 {
-  font-family: $heading;
+  font-family: $sans;
   font-size: 1.5em;
   font-weight: 100;
   line-height: 1.1em;
@@ -98,6 +95,9 @@ b,
 }
 .thin {
   font-weight: 100;
+}
+.italic {
+  font-style: italic !important;
 }
 em {
   background: $black;
@@ -223,6 +223,15 @@ pre,
     border: 1px dotted $greyMd;
     padding: .5em;
   }
+}
+
+/******************************
+Misc
+******************************/
+.amp {
+  font-family: Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif;
+  font-style: italic;
+  font-weight: normal;
 }
 
 /******************************

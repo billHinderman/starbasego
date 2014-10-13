@@ -1,0 +1,33 @@
+.service {
+	color: $white; 
+	padding: 0 8px;
+	margin: 0 auto 1.5em;
+	@media screen and (min-width: $large) {
+		display: table-cell;
+	}
+	.service-image {
+		a {
+			border: none;
+			display: block;
+			height: 12em;
+			margin: auto;
+			width: 12em;
+		}
+	}
+	.service-excerpt {
+		font-size: .75em;
+	}
+
+	h3 {
+		font-family: $heading;
+		font-weight: 600;
+		text-align: center;
+		.amp {
+			color: $white;
+			@include transition(color $transition-static);
+		}
+		&:hover .amp {
+			color: $yellow;
+		}
+	}
+}

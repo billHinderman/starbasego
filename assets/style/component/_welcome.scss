@@ -3,86 +3,162 @@
   }
 
 .welcome {
-  background: $mv;
-  margin-top: -5em;
+  display: table;
   padding: 0;
   position: relative;
   width: 100%;
   z-index: 2;
-}
-
-.welcome-table {
-  display: table;
-}
-
-.welcome-title {
-  color: $white;
-  font-family: $sans;
-  display: table-cell;
-  vertical-align: middle;
-  font-size: 6em;
-  font-weight: 100;
-  line-height: .7em;
-  padding: 1em 16px;
-  text-transform: uppercase;
-  word-break: break-all;
-  b {
-    font-weight: 700;
-  }
-  &:hover {
-
-  }
-  @media screen and (min-width: $s-m) {
-    font-size: 9em;
-    width: 320px;
-  }
-}
-h2 {
-    border-bottom: .05em solid $maroon;
-    color: $maroon;
-    font-size: 3em;
-    line-height: 1em;
-    height: .6em;
-    margin: -.6em auto 0;
-    overflow: hidden;
-    position: relative;
+  .logo {
+    display: table-cell;
     text-align: center;
-    text-transform: uppercase;
-    z-index: 2;
-    @media screen and (min-width: $s-m) {
-      font-size: 6em;
+    vertical-align: middle;
+    width: 100%;
+  }
+  h1 {
+    font-family: $serif;
+    font-size: .75em;
+    font-style: italic;
+  }
+  img {
+    max-width: 384px;
+    min-width: 192px;
+    width: 50%;
+  }
+  .scroll-hint {
+    bottom: 0;
+    color: $black;
+    font-family: $heading;
+    font-size: .75em;
+    font-weight: 600;
+    height: 3em;
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    .scroll-spinner {
+      font-size: 2em;
+      height: 3em;
+      margin: auto;
+      position: relative;
+      width: 3em;
+      @include animation(spinner, 2s, linear, infinite);
     }
-    &.invert {
-      border-color: $white;
-      color: $white;
+    .sh-1,
+    .sh-2,
+    .sh-3,
+    .sh-4 {
+      height: 1em;
+      position: absolute;
+      width: 1em;
+    }
+    .sh-1 {
+      left: 1em;
+      top: 0;
+    }
+    .sh-2 {
+      left: 2em;
+      top: 1em;
+      @include transform(rotate(90deg));
+    }
+    .sh-3 {
+      left: 1em;
+      top: 2em;
+      @include transform(rotate(180deg));
+    }
+    .sh-4 {
+      left: 0;
+      top: 1em;
+      @include transform(rotate(270deg));
     }
   }
+}
+.about {
+  .scroll-hint {
+    color: $yellow;
+    font-family: $heading;
+    font-size: .75em;
+    font-weight: 600;
+    height: 3em;
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    .scroll-spinner {
+      font-size: 2em;
+      height: 3em;
+      margin: -1.5em auto 0;
+      position: relative;
+      width: 3em;
+      @include animation(spinner, 2s, linear, infinite);
+    }
+    .sh-1,
+    .sh-2,
+    .sh-3,
+    .sh-4 {
+      height: 1em;
+      position: absolute;
+      width: 1em;
+    }
+    .sh-1 {
+      color: $white;
+      left: 1em;
+      top: 0;
+    }
+    .sh-2 {
+      left: 2em;
+      top: 1em;
+      @include transform(rotate(90deg));
+    }
+    .sh-3 {
+      color: $white;
+      left: 1em;
+      top: 2em;
+      @include transform(rotate(180deg));
+    }
+    .sh-4 {
+      left: 0;
+      top: 1em;
+      @include transform(rotate(270deg));
+    }
+  }
+}
 .section {
-  overflow: hidden;
+  padding: 1em;
+  @media screen and (min-width: $s-m) {
+    padding: 1em 4em;
+  }
+  @media screen and (min-width: $m-l) {
+    padding: 2em 8em;
+  }
+  h2 {
+    font-family: $heading;
+    border-bottom: .125em solid;
+    line-height: .72em;
+    margin-bottom: .5em;
+    text-indent: .25em;
+    text-shadow: $white 1px 0 0,$white -1px 0 0;
+    width: 288px;
+    @media screen and (min-width: $s-m) {
+      width: 360px;
+    }
+  }
+  .section-content {
+    margin: auto;
+    max-width: 63em;
+  }
 }
 
 /* About */
 .about {
+  background: $black;
   display: table;
   position: relative;
 }
-.about-info {
-  color: $yellow;
-  font-family: $script;
-  font-size: 46em;
-  font-weight: 100;
-  left: -1em;
-  line-height: .6em;
-  position: absolute;
-  width: 4em;
-  word-break: break-all;
-  z-index: 1;
-  @media screen and (min-width: $medium) {
-      font-size: 54em;
-  }
-}
 .about-post {
-  @include grid($white);
+  color: $white;
   display: table-cell;
   font-family: $serif;
   font-size: 2em;
@@ -93,6 +169,13 @@ h2 {
   vertical-align: middle;
   z-index: 2;
   width: 100%;
+  em {
+    background: $white;
+    color: $black;
+  }
+  a {
+    font-style: italic;
+  }
   @media screen and (min-width: $medium) {
     font-size: 3em;
     padding: 180px 8%;
@@ -101,90 +184,27 @@ h2 {
 
 /* Services */
 .services {
-  background: $mv;
+  background: $black;
+  .section-content {
+    @media screen and (min-width: $medium) {
+      display: table;
+    }
+  }
 }
 
 /* Projects */
-.featured-projects {
-  .project-post {
-    background: $white;
-    color: $black;
-    overflow: hidden;
-    min-height: 320px;
-    position: relative;
-    text-align: center;
-    width: 100%; 
-    @media screen and (min-width: $medium) {
-      height: 320px;
-      width: 50%; 
-    }
-
-    .effect {
-      background: linear-gradient(to bottom, $white, rgba($white,.8) 100%);
-      left: 0;
-      height: 100%;
-      padding: 1em;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-  }
-  .button {
-    border-color: $black;
-    color: $black;
-    position: relative;
-    z-index: 1;
-    .fa {
-      left: 0;
-      opacity: 0;
-      position: absolute;
-      text-align: center;
-      top: -1em;
-      @include transition(all $transition-static);
-      width: 100%;
-    }
-    &:hover .fa {
-      opacity: 1;
-      top: -1.5em;
-    }
-  }
-  .post-chapter {
-    color: $white;
-    font-size: 18em;
-    font-weight: 100;
-    left: -10%;
-    line-height: .65em;
-    position: absolute;
-    opacity: .9;
-    text-align: left;
-    top: -10%;
-    width: 120%;
-    word-break: break-all;
-    z-index: 0;
-  }
-  .post-excerpt {
-    margin: 2em 0 4em;
-    position: relative;
-    text-align: left;
-    text-indent: 2em;
-    z-index: 1;
-  }
-  .post-title {
-    font-family: $script;
-    font-size: 3em;
-    position: relative;
-    z-index: 1;
-  }
+.projects {
+  background: $nonwhite;
 }
 
 /* Client */
 .featured-client {
-  background: $mv;
+  background: $white;
 }
 
 /* Team */
 .team {
-  padding: 2em 0 6em;
+  background: $nonwhite;
   li {
     display: table;
     height: 320px;
@@ -195,7 +215,7 @@ h2 {
     }
     .role {
       font-weight: 100;
-      font-family: $script;
+      font-family: $sans;
     }
     .team-info {
       display: block;
@@ -217,7 +237,7 @@ h2 {
       }
     }
     .team-photo {
-      background: $maroon;
+      background: $yellow;
       border: .25em solid $white;
       border-radius: 50%;
       height: 144px;
@@ -241,26 +261,21 @@ h2 {
 
 /* Contact */
 .contact {
-  background: $mv;
-  color: $white;
+  background: $white;
   display: table;
-  padding: 2em 4% 4em;
   width: 100%;
   label span {
-    border-bottom: .05em solid $white;
+    color: $black;
     display: block;
-    font-size: 2em;
-    font-weight: 100;
-    height: .6em;
-    overflow: hidden;
+    font-weight: 600;
     text-align: left;
-    text-transform: uppercase;
   }
   input:not([type=submit]):not([type=file]),
   textarea,
   .input,
   .textarea {
-    margin: -2px 0 1em;
+    background: $nonwhite;
+    margin: 0 0 1em;
     padding: .5em;
     &:invalid:not(:focus),
     &:-moz-ui-invalid:not(:focus) {
@@ -268,8 +283,8 @@ h2 {
     }
   }
   button {
-    border-color: $white;
-    color: $white;
+    border-color: $black;
+    color: $black;
     margin-top: 1em;
     position: relative;
     width: 172px;
@@ -292,86 +307,39 @@ h2 {
       top: -1.5em;
     }
   }
-
-  .contact-half {
-    text-align: center;
-    @media screen and (min-width: $medium) {
-      display: table-cell;
-      min-height: 320px;
-      padding: 2em 4% 4em;
-      vertical-align: middle;
-      width: 50%; 
-    }
-  }
-  h3 {
-    border-bottom: .05em solid $white;
-    display: inline-block;
-    font-size: 3em;
-    height: .6em;
-    margin-top: 32px;
-    overflow: hidden;
-    text-transform: uppercase;
-    @media screen and (min-width: $s-m) {
-      font-size: 3em;
-    }
-    @media screen and (min-width: $medium) {
-      margin-top: 0;
-    }
-  }
   .contact-list {
-    display: inline-block;
-    font-size: 2em;
-    dd {
+    float: left;
+    width: 50%;
+    li {
       display: block;
       float: left;
-      font-size: .375em;
-      font-weight: 400;
-      line-height: 38px;
-      text-transform: uppercase;
+      margin-bottom: 1em;
+      width: 50%;
     }
-    dt {
-      clear: left;
-      display: block;
-      float: left;
-      font-family: $script;
-      line-height: 38px;
-      text-align: right;
-      margin-right: .25em;
-      width: 3em;
+    h3 {
+      border-bottom: .125em solid;
+      font-family: $heading;
+      font-weight: 600;
+      line-height: .72em;
+      margin-bottom: .25em;
+      text-indent: .25em;
+      text-shadow: $white 1px 0 0,$white -1px 0 0;
+      width: 144px;
     }
   }
 }
 
 /* Blog */
-.featured-blogs {
-  .blog-post {
-    background: $white;
-    color: $black;
-    overflow: hidden;
-    min-height: 320px;
-    position: relative;
-    text-align: center;
-    width: 100%; 
-    @media screen and (min-width: $medium) {
-      height: 320px;
-      width: 50%; 
-    }
-
-    .effect {
-      background: linear-gradient(to bottom, $white, rgba($white,.8) 100%);
-      left: 0;
-      height: 100%;
-      padding: 1em;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-  }
+.blogs {
+  background: $nonwhite;
   .button {
     border-color: $black;
     color: $black;
+    display: block;
     position: relative;
     z-index: 1;
+    text-align: center;
+    width: 156px;
     .fa {
       left: 0;
       opacity: 0;
@@ -385,32 +353,5 @@ h2 {
       opacity: 1;
       top: -1.5em;
     }
-  }
-  .post-chapter {
-    color: $white;
-    font-size: 18em;
-    font-weight: 100;
-    left: -10%;
-    line-height: .65em;
-    position: absolute;
-    opacity: .9;
-    text-align: left;
-    top: -10%;
-    width: 120%;
-    word-break: break-all;
-    z-index: 0;
-  }
-  .post-excerpt {
-    margin: 2em 0 4em;
-    position: relative;
-    text-align: left;
-    text-indent: 2em;
-    z-index: 1;
-  }
-  .post-title {
-    font-family: $script;
-    font-size: 3em;
-    position: relative;
-    z-index: 1;
   }
 }

@@ -5,7 +5,10 @@
 <?php endif; ?>
 		<div class="result-container">
 			<div class="result-info">
-				<h3 class="entry-title"><?php the_title(); ?></h3>
+				<h4 class="result-id"><?php the_ID(); ?></h4>
+				<h3 class="entry-title">
+					<?php the_title(); ?>
+				</h3>
 			</div>
 		</div>
 	</a>

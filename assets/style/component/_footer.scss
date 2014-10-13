@@ -6,7 +6,6 @@
 	line-height: 1em;
 	margin-left: 0;
 	overflow: hidden;
-	padding: 1.33em 2em;
 	position: relative;
 	text-transform: uppercase;
 	width: 100%;
@@ -14,32 +13,96 @@
 
 	a {
 		border-bottom: 1px solid transparent;
-		color: $white;
+		color: $yellow;
 		&:hover {
-			border-color: $yellow;
-			color: $yellow;
+			border-color: $white;
+			color: $white;
 		}
 	}
 	.footer-info {
 		text-align: center;
+		padding: 1.33em 2em;
 		@media screen and (min-width: $s-m) {
 			float: left;
 			text-align: left;
 		}
 	}
-	.footer-links {
-		display: block;
-		text-align: center;
-		li {
-			display: inline-block;
-			margin: 1.33em;
+	.footer-links-section {
+		.footer-links {
+			padding: 1.33em 2em;
+			text-align: center;
+			li {
+				display: inline-block;
+				padding: 0 0 1.33em 0;
+				margin: 0;
+				text-align: center;
+				width: 6em;
+			}
 		}
-
 		@media screen and (min-width: $s-m) {
 			float: right;
-			text-align: right;
-			li {
-				margin: 0 0 0 2em;
+			.footer-links {
+				display: inline-block;
+				padding: 1.33em 2em 0 2em;
+				&:first-of-type {
+					padding-right: 0;
+				}
+				li {
+					display: block;
+					text-align: right;
+				}
+			}
+		}
+	}
+	
+	.mailing-list {
+		font-family: $serif;
+		font-style: italic;
+		padding-top: 1.33em;
+		text-transform: none;
+
+		input[type="email"].sml_emailinput {
+			background: $greyDk;
+			color: $white;
+			border: none;
+			display: block;
+			float: left;
+			height: 2em;
+			min-width: inherit;
+			width: 87%;
+			&:hover,
+			&:focus {
+				background: $white;
+				color: $black;
+			}
+		}
+		button {
+			border: none;
+			background: none;
+			color: $yellow;
+			display: block;
+			float: left;
+			font-size: 1.5em;
+			height: 1.333em;
+			position: relative;
+			line-height: 1em;
+			width: 13%;
+			&:hover .fa {
+				color: $white;
+			}
+			.fa {
+				position: relative;
+				opacity: 1;
+				top: -.333em;
+			}
+		}
+		@media screen and (min-width: $s-m) {
+			width: 272px;
+			input[type="email"].sml_emailinput {
+				width: 227px;
+			}
+			button {
+				width: 2em;
 			}
 		}
 	}

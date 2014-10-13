@@ -1,23 +1,21 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : ?>
-	
-	<h1 class="result-title"><?php printf( __( 'Search Results for: %s', 'starbasego' ), get_search_query() ); ?></h1>
-	
-	<?php while ( have_posts() ) : the_post(); ?>
-		<?php get_template_part( 'entry' ); ?>
-	<?php endwhile; ?>
-	<?php get_template_part( 'nav', 'below' ); ?>
-<?php else : ?>
-	<article id="post-0" class="post no-results not-found">
-		
-		<h2 class="entry-title"><?php _e( 'Nothing Found', 'starbasego' ); ?></h2>
-		
-		<section class="entry-content">
-			<p><?php _e( 'Sorry, nothing matched your search. Please try again.', 'starbasego' ); ?></p>
-		</section>
-	</article>
-<?php endif; ?>
+	<div class="result-title">
+		<h1 data-fill="strict" data-fill-size=".666"><?php printf( __( '%s', 'starbasego' ), get_search_query() ); ?></h1>
+	</div>
 
-<?php get_sidebar(); ?>
+<div class="results-container">
+	<div class="entry-results-list">
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'entry-result' ); ?>
+		<?php endwhile; endif; ?>
+	</div>
+</div>
+
+<?php else : ?>
+	<div class="result-title">
+		<h1 data-fill="strict"><?php printf( __( 'Sorry, nothing found for <i class="f-serif italic">%s</i>', 'starbasego' ), get_search_query() ); ?></h1>
+	</div>
+<?php endif; ?>
 <?php get_footer(); ?>

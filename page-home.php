@@ -1,68 +1,88 @@
 <?php get_header(); ?>
 
-<section class="welcome section" data-bg-image="<?php bloginfo(template_url); ?>/assets/images/colony_final/<?php echo str_pad(rand(1, 12), 2, "0", STR_PAD_LEFT); ?>_mod_2.jpg" data-fill>
-	<div class="welcome-table">
-		<h1 class="welcome-title">sta<br>rba<br>se<br><b>go!</b></h1>
+<!-- <section class="welcome section" data-bg-image="<?php bloginfo(template_url); ?>/assets/images/colony_final/<?php echo str_pad(rand(1, 12), 2, "0", STR_PAD_LEFT); ?>_mod_2.jpg" data-fill> 
+<section class="welcome section" data-bg-image="<?php bloginfo(template_url); ?>/assets/images/colony_final/white.jpg" data-fill="strict"> -->
+<section class="welcome section" data-fill="strict" data-fill-size="1">	
+	<div class="logo">
+		<img src="http://www.starbasego.com/wp-content/themes/starbasego/assets/images/go.svg"/>
+		<h1>Fig. N°1<br>"Starbase Go!"</h1>
+	</div>
+	<div class="scroll-hint">
+		<div class="scroll-spinner">
+			<i class="fa fa-rocket sh-1"></i>
+			<i class="fa fa-lightbulb-o sh-2"></i>
+			<i class="fa fa-heart sh-3"></i>
+			<i class="fa fa-bolt sh-4"></i>
+		</div>
 	</div>
 </section>
 
-<h2 class="invert" id="about">Is</h2>
-<section class="section about" data-fill="strict">
+
+<section class="section about" data-fill="strict" data-fill-size=".666">
+	<div class="scroll-hint">
+		<div class="scroll-spinner">
+			<i class="fa fa-rocket sh-1"></i>
+			<i class="fa fa-lightbulb-o sh-2"></i>
+			<i class="fa fa-heart sh-3"></i>
+			<i class="fa fa-bolt sh-4"></i>
+		</div>
+	</div>
 		<?php query_posts('category_name=is&tag=homepage&posts_per_page=1'); ?>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			  <!--<div class="about-info">N°<?php the_ID(); ?>,<?php the_date( 'm/Y' ); ?></div>-->
-			  <div class="about-post" data-fill>
+			  <div class="about-post">
 			  	<?php the_content(); ?>
 			  </div>
 			<?php endwhile; endif; ?>
 		<?php wp_reset_query(); ?>
 </section>
 
-<h2>Do</h2>
-<section class="section services" data-fill>
-	<div class="effect">
-		<?php query_posts('category_name=does&tag=homepage&posts_per_page=3'); ?>
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		   <h4><?php $blurb_values = get_post_custom_values( 'blurb' );
-						 foreach ( $blurb_values as $key => $blurb ) {
-						   echo "$blurb"; 
-						 } ?></h4>
-		<?php endwhile; endif; ?>
-		<?php wp_reset_query(); ?>
+<section class="section services">
+	<div class="section-content float-clear">
+		<div class="service">
+			<div class="service-image">
+				<a href="http://www.starbasego.com/is/an-interactive-design-studio/" data-bg-image="http://www.starbasego.com/wp-content/themes/starbasego/assets/images/go.svg"></a>
+			</div>
+			<a href="http://www.starbasego.com/is/an-interactive-design-studio/">
+				<h3>Web <div class="amp">&</div> interaction design</h3>
+			</a>
+			<div class="service-excerpt">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+		</div>
+		<div class="service">
+			<div class="service-image">
+				<a href="http://www.starbasego.com/is/a-storytelling-partner" data-bg-image="http://www.starbasego.com/wp-content/themes/starbasego/assets/images/go.svg"></a>
+			</div>
+			<a href="http://www.starbasego.com/is/a-storytelling-partner">
+				<h3>Branding <div class="amp">&</div> strategy</h3>
+			</a>
+			<div class="service-excerpt">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+		</div>
+		<div class="service">
+			<div class="service-image">
+				<a href="http://www.starbasego.com/is/a-digital-powerhouse" data-bg-image="http://www.starbasego.com/wp-content/themes/starbasego/assets/images/go.svg"></a>
+			</div>
+			<a href="http://www.starbasego.com/is/a-digital-powerhouse">
+				<h3>Web <div class="amp">&</div> application development</h3>
+			</a>
+			<div class="service-excerpt">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+		</div>
 	</div>
 </section>
 
-<h2 id="make" class="invert">Make</h2>
-<section class="section featured-projects">
-	<div class="effect">
+
+<section class="section projects" data-fill data-fill-size=".666">
+	<h2 id="make">Make</h2>
+	<div class="section-content">
 		<?php query_posts('category_name=makes&tag=featured&posts_per_page=4'); ?>
-		<?php if ( have_posts() ) : ?>
-			<ul class="float-clear">
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php if ( get_post_thumbnail_id() ) : ?>
-		   			<li class="project-post float-left" data-bg-image="<?php $thumb_id = get_post_thumbnail_id();$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true); echo $thumb_url[0]; ?>">
-		   		<?php else : ?>
-						<li class="project-post float-left">
-					<?php endif; ?>
-		   			<div class="effect">
-					  <div class="post-chapter">
-							N°<?php the_ID(); ?>,<?php the_date( 'm/Y' ); ?> 
-						</div>
-					  <h3 class="post-title"><?php the_title(); ?></h3>
-					  <div class="post-excerpt"><?php the_excerpt(); ?></div>
-					  <a class="button" href="<?php echo get_permalink(); ?>"><i class="fa fa-rocket"></i> Read the dossier</a>
-						</div>
-		   		</li>
-				<?php endwhile;?>
-			</ul>
-		<?php endif; ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'entry-result' ); ?>
+			<?php endwhile; endif; ?>
 		<?php wp_reset_query(); ?>
 	</div>
 </section>
 
-<h2 id="client">Help</h2>
-<section class="section featured-client" data-fill>
-	<div class="effect">
+<section class="section featured-client" data-fill data-fill-size=".666">
+	<h2 id="client">Help</h2>
+	<div class="section-content">
 		<?php query_posts('category_name=loves&tag=featured&posts_per_page=1'); ?>
 		<?php if ( have_posts() ) : ?>
 			<ul class="float-clear">
@@ -88,9 +108,9 @@
 	</div>
 </section>
 
-<h2 class="invert" id="team">Are</h2>
 <section class="section team">
-	<div class="effect">
+	<h2 id="team">Are</h2>
+	<div class="section-content">
 		<?php query_posts('category_name=are&tag=homepage&posts_per_page=2'); ?>
 		<?php if ( have_posts() ) : ?>
 			<ul class="float-clear">
@@ -117,64 +137,49 @@
 				<?php endwhile; ?>
 			</ul>
 		<?php endif; ?>
-		 
 		<?php wp_reset_query(); ?>
 	</div>
 </section>
 
-<h2 id="contact">Speak</h2>
-<section class="section contact" data-fill="strict">
-	<div class="contact-half">
-		<?php query_posts('category_name=says&tag=homepage&posts_per_page=1'); ?>
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		   <?php the_content(); ?>
-		<?php endwhile; endif; ?>
-		<?php wp_reset_query(); ?>
+<section class="section contact" data-fill="strict" data-fill-size=".666">
+	<h2 id="contact">Speak</h2>
+	<div class="section-content float-clear">
+		<ul class="contact-list">
+			<li><a href="/says/hello">Say hello</a></li>
+			<li><a href="/says/lets-get-started">Let's get started together</a></li>
+		</ul>
+		<ul class="contact-list">
+			<li>
+				<h3>General</h3>
+				<a href="mailto:hello@starbasego.com"><i class="fa"></i> hello@starbasego.com</a>
+			</li>
+
+			<li>
+				<h3>Business</h3>
+				<a href="mailto:bill@starbasego.com"><i class="fa"></i> bill@starbasego.com</a>
+			</li>
+
+			<li>
+				<h3>News</h3>
+				<a target="blank" href="https://www.twitter.com/starbaseGo"><i class="fa fa-twitter"></i> @starbaseGo</a>
+			</li>
+
+			<li>
+				<h3>Noise</h3>
+				<a target="blank" href="https://www.facebook.com/starbaseGo"><i class="fa fa-facebook"></i> /starbaseGo</a>
+			</li>
+		</ul>
 	</div>
-	<div class="contact-half">
-		<h3>Say hello</h3>
-		<br>
-		<dl class="contact-list float-clear">
-			<dt>email</dt>
-			<dd><a href="mailto:hello@starbasego.com">hello@starbasego.com</a></dd>
-
-			<dt>tel</dt>
-			<dd><a href="tel:17083053993">1.708.305.3993</a></dd>
-
-			<dt><i class="fa fa-facebook"></i></dt>
-			<dd><a target="blank" href="https://www.facebook.com/starbaseGo">facebook</a></dd>
-
-			<dt><i class="fa fa-twitter"></i></dt>
-			<dd><a target="blank" href="https://www.twitter.com/starbaseGo">twitter</a></dd>
-		</dl>
-	</div>
+		
 </section>
 
-<h2 class="invert" id="blogs">Think</h2>
-<section class="section featured-blogs">
-	<div class="effect">
-		<?php query_posts('category_name=thinks&tag=featured&posts_per_page=2'); ?>
-		<?php if ( have_posts() ) : ?>
-			<ul class="float-clear">
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php if ( get_post_thumbnail_id() ) : ?>
-		   			<li class="blog-post float-left"  data-bg-image="<?php $thumb_id = get_post_thumbnail_id();$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true); echo $thumb_url[0]; ?>">
-		   		<?php else : ?>
-						<li class="blog-post float-left">
-					<?php endif; ?>
-						<div class="effect">
-					  <div class="post-chapter">
-							N°<?php the_ID(); ?>,<?php the_date( 'm/Y' ); ?> 
-						</div>
-					  <h3 class="post-title"><?php the_title(); ?></h3>
-					  
-					  <div class="post-excerpt"><?php the_excerpt(); ?></div>
-					  <a class="button" href="<?php echo get_permalink(); ?>"><i class="fa fa-lightbulb-o"></i> Read our minds</a>
-						</div>
-					</li>
-				<?php endwhile;?>
-			</ul>
-		<?php endif; ?>
+<section class="section blogs">
+	<h2 id="blogs">Think</h2>
+	<div class="section-content">
+		<?php query_posts('category_name=thinks&posts_per_page=2'); ?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'entry-result' ); ?>
+			<?php endwhile; endif; ?>
 		<?php wp_reset_query(); ?>
 	</div>
 </section>

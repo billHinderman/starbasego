@@ -1,14 +1,10 @@
 <?php get_header(); ?>
+<div data-fill="strict" class="error-title" data-bg-image="<?php bloginfo(template_url); ?>/assets/images/colony/04.jpg">
+	<div class="error-content">
+		<h1>You've stepped out of airlock.</h1>
+		<p>Sorry, it looks like this page was jettisoned into space.</p>
+		<p>Why don't we head <a href="/">home</a> and regroup?</p>
+	</div>
+</div>
 
-<article class="post not-found">
-	<header class="header">
-		<h1 class="entry-title"><?php _e( 'Not Found', 'starbasego' ); ?></h1>
-	</header>
-	<section class="entry-content">
-		<p><?php _e( 'Nothing found for the requested page. Try a search instead?', 'starbasego' ); ?></p>
-		<?php get_search_form(); ?>
-	</section>
-</article>
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

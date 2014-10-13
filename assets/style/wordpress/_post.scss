@@ -1,7 +1,8 @@
-.post {
+.post,
+.page-template-default {
 	margin-top: -5em;
 	.chapter {
-		background: $maroon;
+		background: $black;
 		display: table;
 		font-weight: 100;
 		line-height: 1em;
@@ -10,18 +11,18 @@
 		width: 100%;
 		.entry-title {
 			color: $white;
-			font-size: 3em;
-			font-weight: 100;
+			font-family: $heading;
+			font-size: 2.25em;
+			font-weight: 600;
 			display: table-cell;
 			vertical-align: middle;
-			line-height: .7em;
+			line-height: 1.1em;
 			text-align: center;
-			text-transform: uppercase;
-			padding: 1em 16px;
+			padding: 1em;
 			word-break: break-word;
 			width: 100%;
-			@media screen and (min-width: $medium) {
-		    font-size: 6em;
+			@media screen and (min-width: $m-l) {
+		    padding: 1em 4em;
 		  }
 		}
 	}
@@ -52,24 +53,30 @@
 	      width: 100%;
 			}
 			a:hover:before {
+				color: $black;
 				opacity: 1;
 	      top: -1.25em;
 			}
 		}
-		.chapter-info {
+		.entry-author-meta {
+			font-family: $serif;
+			font-style: italic;
+			font-weight: 400;
+			line-height: 1.5em;
+			margin-top: -1em;
+			text-transform: none;
+		}
+		.entry-chapter {
 			color: $white;
-			font-family: $script;
-			font-size: 1em;
-			line-height: 1em;
-			margin-left: -.8em;
-			position: absolute;
+			font-family: $serif;
+			font-style: italic;
+			font-size: .5em;
+			font-weight: 400;
+			margin-top: -4.5em;
+			margin-bottom: 4em;
 			text-align: center;
 			white-space: nowrap;
-			top: -.4em;
 			width: 100%;
-			@media screen and (min-width: $s-m) {
-		    font-size: 2em;
-		  }
 		}
 		p {
 			margin-bottom: 1em;
@@ -106,6 +113,7 @@
       width: 100%;
 		}
 		a:hover:before {
+			color: $black;
 			opacity: 1;
       top: -1.25em;
 		}

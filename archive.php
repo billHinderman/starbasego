@@ -8,11 +8,12 @@
 	else { _e( 'Archives', 'starbasego' ); }
 	?>
 </h1>
+<div class="results-container">
+	<div class="entry-results-list">
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'entry-result' ); ?>
+		<?php endwhile; endif; ?>
+	</div>
+</div>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<?php get_template_part( 'entry' ); ?>
-<?php endwhile; endif; ?>
-<?php get_template_part( 'nav', 'below' ); ?>
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

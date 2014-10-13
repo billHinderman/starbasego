@@ -17,87 +17,46 @@
 	}
 }
 
+.nav-toggle {
+	@include animation(ani-4, 2s, ease-in-out, infinite);
+	border: none;
+	cursor: pointer;
+	display: block;
+	height: 60px;
+	position: fixed;
+	right: 1em;
+	top: 1em;
+	width: 60px;
+
+	span {
+		background: $yellow;
+		height: 8px;
+		left: 50%;
+		top: 50%;
+		position: absolute;
+		@include transform(translate3D(-50%,-50%,0));
+		width: 8px;
+	}
+	span:nth-child(1) {
+		@include animation(ani-1, 2s, ease-in-out, infinite);
+	}
+	span:nth-child(2) {
+		@include animation(ani-2, 2s, ease-in-out, infinite);
+	}
+	span:nth-child(3) {
+		@include animation(ani-3, 2s, ease-in-out, infinite);
+	}
+}
+
 .header-nav {
 	display: block;
 	height: 100%;
-	margin: 4em 0 0 0;
+	padding: 4em 0 0 0;
 	position: fixed;
 	right: 320px;
 	top: 0;
 	width: 320px;
 	z-index: 0;
-	.nav-home {
-		color: $black;
-		border-bottom: none;
-		display: block;
-		font-size: .75em;
-	  left: 0;
-	  padding: 1em 1.5em;
-	  margin-top: -4em;
-	  position: absolute;
-	  text-transform: uppercase;
-	  @include transition(color $transition-standard);
-	  top: 0;
-	}
-	.nav-menu {
-		font-weight: 100;
-		margin: .5em;
-		padding: .5em;
-		text-transform: uppercase;
-		a {
-			color: $white;
-			font-weight: 300;
-			&:hover {
-				border-color: $black;
-				color: $black;
-			}
-		}
-		.all-link {
-			margin: .325 0;
-		}
-		h3 {
-			font-family: $script;
-			padding-bottom: .125em;
-			text-transform: none;
-		}
-		.posts-link {
-			display: inline-block;
-			margin-bottom: .25em;
-		}
-		.header-link {
-			background: $white;
-			display: block;
-			@media screen and (min-height: $s-m) {
-				border-radius: 50%;
-				float: left;
-				margin-bottom: .5em;
-				a {
-					border-radius: 50%;
-					height: 140px;
-					width: 140px;
-				}
-
-				&:nth-of-type(even) {
-					margin-right: .5em;
-				}
-				&:nth-of-type(odd) {
-					text-align: right;
-				}
-			}
-			a {
-				background: rgba($white,.8);
-				border: none;
-				color: $black;
-				display: block;
-				font-weight: 400;
-				padding: .5em;
-				&:hover {
-					background: $black;
-					color: $white;
-				}
-			}
-		}
-	}
 }
 .menu .header-nav {
   @include animation(sidebarIn, .9s, ease-in-out, 1);
@@ -107,100 +66,36 @@
   @include animation(sidebarOut, .9s, ease-in-out, 1);
   right: 320px;
 }
-.nav-toggle {
-	border-bottom: none;
-	cursor: pointer;
-	color: $yellow;
-	display: block;
-	height: 3em;
-  margin: .5em;
-  position: fixed;
-  right: 0;
-  top: 0;
-  @include transition(all .45s .45s);
-  z-index: 3;
-  width: 3em;
-  .nav-icon {
-    color: $yellow;
-  	display: block;
-    font-size: 1.5em;
-  	height: 1em;
-  	left: .5em;
-  	position: absolute;
-    text-align: center;
-    top: .5em;
-  	@include transition(all .45s .45s);
-  	width: 1em;
-  }
-  .nav-text {
-  	display: none;
-  }
-}
-
-.menu .nav-toggle .nav-icon {
-	color: $black;
-}
-
-.menu .nav-toggle {
-  @include animation(menuIn, .6s, ease-in-out, 1);
-}
-
-.no-menu .nav-toggle {
-  @include animation(menuOut, .6s, ease-in-out, 1);
-}
-
-.search-form {
-	margin-left: 1em;
-	position: relative;
-	@include transition(all $transition-static);
-	pointer: cursor;
-	width: 288px;
-	&:hover,
-	&.focus {
-		margin-left: 0;
-		width: 320px;
-		label {
-			border-color: black;
+.header-list {
+	margin-top: 2em;
+	a {
+		border: none;
+		color: $yellow;
+		display: block;
+		font-weight: 300;
+		line-height: 1.5em;
+		margin: 0 2em;
+		padding: .25em 0;
+		text-transform: uppercase;
+		@media screen and (min-height: $s-m) {
+			font-size: 1.5em;
+			margin: 0 1em;
+		}
+		.fa-angle-right {
+			float: right;
+			padding-top: .125em;
+		}
+		.header-icon {
+			color: $black;
+			padding-right: .5em;
+			text-align: center;
+			width: 1.5em;
+		}
+		&:hover {
 			color: $black;
 		}
-		input[type="text"] {
-			background: $black;
-			color: $white;
-		}
-		button {
-			color: $white !important;
-			&:focus {
-				color: $white !important;
-			}
-		}
 	}
-	input[type="text"] {
-		background: $white;
-		line-height: 1.25em;
-		margin-top: -2px;
-		padding: .5em;
-		width: 100%;
+	.separate {
+		border-bottom: 1px solid $black;
 	}
-	button[type="submit"] {
-		border: none;
-		color: $black;
-		float: right;
-		font-size: 1.25em;
-		margin-top: -1.9em;
-		width: 2.5em;
-		&:focus {
-			color: $black !important;
-		}
-	}
-	label {
-    border-bottom: .05em solid $white;
-    display: block;
-    font-size: 2em;
-    font-weight: 100;
-    height: .6em;
-    overflow: hidden;
-    text-align: left;
-    text-transform: uppercase;
-    @include transition(all $transition-static);
-  }
 }
