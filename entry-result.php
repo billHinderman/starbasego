@@ -16,10 +16,10 @@
 		</a>
 
 		<div class="result-entry-excerpt"><?php the_excerpt(); ?></div>
-		<?php if ( in_category( 'makes' )) : ?>
-			<a class="button result-entry-button" href="<?php echo get_permalink(); ?>"><i class="fa fa-rocket"></i> Read the dossier</a>
-		<?php else : ?>
+		<?php if ( in_category( 'thinks' )) : ?>
 			<a class="button result-entry-button" href="<?php echo get_permalink(); ?>"><i class="fa fa-lightbulb-o"></i> Read our minds</a>
+		<?php else : ?>
+		<a class="button result-entry-button" href="<?php echo get_permalink(); ?>"><i class="fa fa-rocket"></i> Read the dossier</a>
 		<?php endif; ?>
 	</div>
 </div>

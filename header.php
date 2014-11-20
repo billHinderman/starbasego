@@ -12,7 +12,6 @@
 		<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/script/modernizr.js"></script>
 		<script type="text/javascript" src="//use.typekit.net/cqy4fmu.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>

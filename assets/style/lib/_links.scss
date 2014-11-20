@@ -26,4 +26,9 @@ a:visited, .link:visited {
   &.external {
     
   }
+
+  &.link-no-style {
+    border: none !important;
+    color: inherit;
+  }
 }

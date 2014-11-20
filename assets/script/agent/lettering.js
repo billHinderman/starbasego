@@ -3,5 +3,4 @@
 
 jQuery(document).ready(function($) {
   $("*[data-lettering]").lettering('words').children('span').lettering();
-  $(".sbg").lettering();
-});
+});	

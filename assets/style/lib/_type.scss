@@ -100,6 +100,9 @@ b,
   font-style: italic !important;
 }
 em {
+ font-style: italic; 
+}
+em.blacken {
   background: $black;
   color: $white;
   font-family: $sans;
@@ -251,3 +254,23 @@ SBG
     font-weight: 700;
   }
 }
+.c-positive {
+  display: inline-block;
+  font-weight: bold;
+  [class^="char"] {
+    display: inline-block;
+    border: 1px solid $greyMd;
+    font-family: $heading;
+    font-style: normal;
+    padding: .125em;
+    margin: 0 .015em;
+  }
+}
+.c-negative {
+  color: $red;
+  font-family: $serif;
+  font-style: italic;
+  font-weight: normal;
+  padding: .125em;
+}
+

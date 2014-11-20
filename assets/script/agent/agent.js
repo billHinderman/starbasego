@@ -1,6 +1,7 @@
 // @codekit-append "background.js"
 // @codekit-append "button.js"
 // @codekit-append "collapse.js"
+// @codekit-append "constellation.js"
 // @codekit-append "fill.js"
 // @codekit-append "lettering.js"
 // @codekit-append "lightbox.js"
