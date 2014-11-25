@@ -8,4 +8,5 @@
 // @codekit-append "microcontent.js"
 // @codekit-append "nav.js"
 // @codekit-append "smooth.js"
+// @codekit-append "solari.js"
 // @codekit-append "thumper.js"

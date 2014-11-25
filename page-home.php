@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section class="welcome section" data-fill="strict" data-fill-size="1">	
+<section class="section welcome" data-fill="strict" data-fill-size="1">	
 	<div class="logo">
 		<img src="http://www.starbasego.com/wp-content/themes/starbasego/assets/images/go.svg"/>
 		<h1>Fig. N°1<br>"Starbase Go!"</h1>
@@ -13,7 +13,9 @@
 		</div>
 	</div>
 </section>
-
+<div>
+<div data-solari data-solari-options='{"digitMax":"15"}'>aasdfasdf</div>
+</div>
 <section class="section about" data-fill="strict" data-fill-size=".666">
 	<div class="scroll-hint">
 		<div class="scroll-spinner">
@@ -23,7 +25,7 @@
 			<i class="fa fa-bolt sh-4"></i>
 		</div>
 	</div>
-	<div data-constellation class="about-post">
+	<div class="about-post">
 		<h2>Starbase Go! makes innovative digital products for creative people.</h2>
 		<a href="http://www.starbasego.com/is/this" title="Learn More">Learn more.</a>	
 	</div>

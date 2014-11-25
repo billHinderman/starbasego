@@ -1,0 +1,51 @@
+[data-solari] {
+		display: inline-block;
+	  font-size: 1.4em;
+	  line-height: 1.3em;
+    margin: .25em 0;
+    text-align: center;
+    text-transform: uppercase;
+	  vertical-align: middle;
+
+	.digit {
+    border: 1px solid $greyMd;
+    background: $greyMd;
+    border-radius: .075em;
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    display: inline-block;
+    height: 1.25em;
+    margin: 0 .025em;
+    position: relative;
+    width: 1em;
+	}
+	.digit-top,
+	.digit-bottom {
+		background: $black;
+    border-radius: .075em;
+		box-shadow: 0 0 5px 1px #000 inset;
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    color: $white;
+    font-size: inherit;
+    height: 1.25em;
+    line-height: inherit;
+    position: absolute;
+    text-align: center;
+    width: 1em;
+	}
+	.digit-top {
+    clip: rect(0px, 1em, .635em, 0px);
+    top: 0;
+    left: 0;
+    overflow: hidden;
+	}
+	.digit-bottom {
+    bottom: 0;
+    clip: rect(.675em, 1em, 1.25em, 0px);
+    left: 0;
+    overflow: hidden;
+	}
+}
