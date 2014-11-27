@@ -1,7 +1,7 @@
 		</div>
 		<footer class="footer float-clear" role="contentinfo">
 			<div class="footer-section">
-				<a class="link-no-style" href="/"><img src="http://www.starbasego.com/wp-content/themes/starbasego/assets/images/go.svg" height="120" width="120"/></a>
+				<a class="link-no-style" href="/"><img src="/wp-content/themes/starbasego/assets/images/go-y.svg" height="120" width="120"/></a>
 			</div>
 			<div class="footer-section">
 				<span class="footer-head">Contact</span>
